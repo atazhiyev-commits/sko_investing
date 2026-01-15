@@ -34,6 +34,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg"
+        />
+      </head>
       <body>
         <AppRouterCacheProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
