@@ -1,0 +1,22 @@
+.sideMenu {
+  position: absolute;
+  z-index: 5;
+
+  .sidebar {
+    background-color: #fff;
+    width: 450px;
+    .menu {
+      &__close {
+        display: flex;
+        margin-top: 15px;
+        margin-right: 15px;
+        padding: 5px;
+      }
+      .menu-item {
+        color: #000;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+}

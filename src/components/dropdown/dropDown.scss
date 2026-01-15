@@ -1,0 +1,31 @@
+.dropDown {
+  --dropdown-width: 300px;
+  --dropdown-border-radius: 5px;
+  --dropdown-margin-top: 30px;
+
+  width: var(--dropdown-width);
+  border-radius: var(--dropdown-border-radius);
+  margin-top: var(--dropdown-margin-top);
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  &__content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      padding: 8px 15px;
+      border-bottom: 1px solid #afafaf;
+      color: #4d4d4d;
+
+      text-align: left;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--color-lightBlue);
+      }
+    }
+  }
+}

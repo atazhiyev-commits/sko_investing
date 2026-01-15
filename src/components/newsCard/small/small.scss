@@ -1,0 +1,53 @@
+.SmallImg {
+  max-width: 100%;
+  border-radius: 5px;
+
+  .news-image {
+    object-fit: cover;
+    overflow: hidden;
+    height: 160px;
+    border-radius: 5px;
+
+    img {
+      object-fit: cover;
+      transition: all 0.5s;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .news-info {
+    margin-top: 8px;
+  }
+
+  .news-date {
+    font-size: 14px;
+    color: var(--color-gray);
+  }
+
+  .news-title {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+
+    @include clamp(4);
+  }
+
+  &:hover {
+    .news-image img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .SmallImg {
+    .news-title {
+      font-size: 12px;
+    }
+
+    .news-date {
+      font-size: 12px;
+    }
+  }
+}

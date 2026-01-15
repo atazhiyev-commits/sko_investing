@@ -1,0 +1,76 @@
+.blockHelper {
+  max-width: max-content;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 490px;
+    height: 55px;
+    padding: 16px 22px;
+    background-color: var(--color-white);
+
+    .blockIcon {
+      svg {
+        color: #00c0e8;
+      }
+    }
+
+    .blockText {
+      text-align: left;
+
+      letter-spacing: 0.6px;
+      font-size: 16px;
+      font-weight: 500;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    &__item {
+      max-width: 290px;
+    }
+
+    .blockText {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__item {
+      max-width: 250px;
+      flex-direction: column;
+      height: 100px;
+      gap: 5px;
+
+      .blockIcon {
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .blockText {
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    &__item {
+      max-width: 190px;
+      flex-direction: column;
+      height: 100px;
+      gap: 5px;
+      padding: 15px 10px;
+    }
+
+    .blockText {
+      font-size: 13px;
+    }
+  }
+}

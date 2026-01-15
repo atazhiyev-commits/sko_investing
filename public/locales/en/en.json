@@ -1,0 +1,320 @@
+{
+  "translation": {
+    "header": {
+      "seacrhPlaceholder": "search",
+      "headerMenu": {
+        "howHelp": "How we help",
+        "protectionInvest": "Investor protection",
+        "contacts": "Contacts"
+      },
+
+      "headerBottom": [
+        {
+          "label": "Investor guide",
+          "link": "/investor-guide",
+          "list": [
+            {
+              "name": "Registration and business",
+              "link": "/business-registration",
+              "list": [
+                {
+                  "name": "Business registration",
+                  "link": "/business-registration"
+                },
+                { "name": "Second-tier banks", "link": "/banks" },
+                { "name": "Hotels in North Kazakhstan", "link": "/hotels" }
+              ]
+            },
+
+            {
+              "name": "Government support",
+              "link": "/gov-support",
+              "list": [
+                {
+                  "name": "Government support measures",
+                  "link": "/support-measures"
+                },
+                {
+                  "name": "Investment contract conclusion",
+                  "link": "/investment-contract"
+                },
+                {
+                  "name": "Inclusion in the Unified Industrialization Map",
+                  "link": "/industrialization-map"
+                }
+              ]
+            },
+
+            {
+              "name": "Land plots",
+              "link": "/land-plots",
+              "list": [
+                {
+                  "name": "Obtaining a land plot without auction",
+                  "link": "/land-without-auction"
+                },
+                {
+                  "name": "Obtaining a land plot at auction",
+                  "link": "/land-auction"
+                },
+                {
+                  "name": "Registration of property rights",
+                  "link": "/property-rights"
+                }
+              ]
+            },
+
+            {
+              "name": "Construction and commissioning",
+              "link": "/construction",
+              "list": [
+                {
+                  "name": "Obtaining construction permit",
+                  "link": "/construction-permit"
+                },
+                {
+                  "name": "Obtaining facility commissioning permit",
+                  "link": "/operation-permit"
+                }
+              ]
+            },
+
+            {
+              "name": "Technical conditions and connections",
+              "link": "/technical-conditions",
+              "list": [
+                {
+                  "name": "Obtaining technical conditions",
+                  "link": "/technical-conditions"
+                },
+                {
+                  "name": "Connection to electrical networks",
+                  "link": "/electricity-connection"
+                },
+                {
+                  "name": "Connection to water supply and sewerage",
+                  "link": "/water-connection"
+                },
+                {
+                  "name": "Connection to heat supply",
+                  "link": "/heat-connection"
+                },
+                {
+                  "name": "Connection to gas distribution networks",
+                  "link": "/gas-connection"
+                }
+              ]
+            },
+
+            {
+              "name": "Infrastructure",
+              "link": "/infrastructure",
+              "list": [
+                {
+                  "name": "Access to road infrastructure",
+                  "link": "/road-access"
+                }
+              ]
+            },
+
+            {
+              "name": "FAQ",
+              "link": "/faq"
+            }
+          ]
+        },
+
+        {
+          "label": "Investment opportunities",
+          "link": "/investment-opportunities",
+          "list": [
+            {
+              "name": "Investment potential of the region",
+              "link": "/investment-potential-region"
+            },
+            {
+              "name": "Investment proposals",
+              "link": "/investment-offers"
+            },
+            {
+              "name": "Ongoing investment projects",
+              "link": "/ongoing-projects"
+            },
+            {
+              "name": "Completed investment projects",
+              "link": "/completed-projects"
+            },
+            {
+              "name": "Special Economic Zone Qyzyljar",
+              "link": "/special-economic-zone-qyzyljar"
+            },
+            {
+              "name": "Public-private partnership",
+              "link": "/public-private-partnership"
+            }
+          ]
+        },
+
+        {
+          "label": "Regulatory legal acts",
+          "link": "/regulatory-acts",
+          "list": [
+            { "name": "Laws", "link": "/laws" },
+            { "name": "Codes", "link": "/codes" },
+            {
+              "name": "Government resolutions of the RK",
+              "link": "/government-resolutions"
+            },
+            {
+              "name": "Orders of the Central Government Office",
+              "link": "/cgo-orders"
+            },
+            {
+              "name": "Resolutions of the Akimat",
+              "link": "/akimat-resolutions"
+            }
+          ]
+        },
+
+        {
+          "label": "About the region",
+          "link": "/about-region",
+          "list": [
+            { "name": "Information about the region", "link": "/region-info" },
+            { "name": "Economy", "link": "/economy" },
+            {
+              "name": "Infrastructure and tariffs",
+              "link": "/infrastructure-and-tariffs"
+            },
+            { "name": "Human resources", "link": "/human-resources" },
+            { "name": "Success stories", "link": "/success-stories" }
+          ]
+        }
+      ],
+      "search": {
+        "label": "Search",
+        "result": "results",
+        "link": "/search"
+      }
+    },
+
+    "hero": {
+      "title": "INVEST IN THE NORTH KAZAKHSTAN REGION",
+      "Iwant": "I WANT TO",
+      "list": [
+        {
+          "name": "Rent a land plot without bidding",
+          "link": "/land-without-auction"
+        },
+        {
+          "name": "View support measures",
+          "link": "/support-measures"
+        },
+        {
+          "name": "Choose a location for project implementation",
+          "link": "/ongoing-projects"
+        },
+        {
+          "name": "Implement an investment project",
+          "link": "/ongoing-projects"
+        },
+        {
+          "name": "Choose a location for project implementation",
+          "link": "/ongoing-projects"
+        }
+      ]
+    },
+
+    "news": {
+      "title": "news",
+      "button": "All news",
+      "otherNews": "Other news"
+    },
+
+    "helpers": {
+      "title": "How we help",
+      "list": [
+        {
+          "name": "Free consultation on investment activities in Kazakhstan",
+          "info": "Our experts conduct a detailed analysis of investment opportunities in Kazakhstan.\nWe help:\nAssess the potential of your project\nDetermine optimal development strategies\nSelect preferential regimes and tax benefits\nPrepare a business plan for investors."
+        },
+        {
+          "name": "Support with concluding an investment contract",
+          "info": "Full support at all stages of negotiations and contract signing.\nWe help:\nAgree terms with investment authorities\nPrepare the necessary documentation\nAccelerate the approval process\nProtect the investor's interests."
+        },
+        {
+          "name": "Company registration and registration with RK authorities",
+          "info": "Fast processing of all registration documents required for company operation.\nWe help:\nRegister the company with RDIMVS\nObtain TIN and a bank account\nRegister with tax authorities\nObtain all necessary licenses."
+        },
+        {
+          "name": "Tax planning and optimization",
+          "info": "Reducing the tax burden while complying with Kazakhstan legislation.\nWe help:\nApply available tax incentives\nOptimize business structure\nObtain exemptions from import duties\nLegally minimize tax payments."
+        },
+        {
+          "name": "Tax planning and optimization",
+          "info": "Reducing the tax burden while complying with Kazakhstan legislation.\nWe help:\nApply available tax incentives\nOptimize business structure\nObtain exemptions from import duties\nLegally minimize tax payments."
+        }
+      ]
+    },
+
+    "faq": {
+      "title": "FAQ",
+      "link": "/catalog/investor-guide/faq",
+      "forInvestors": "FAQ",
+
+      "list": [
+        {
+          "question": "What is the basis for obtaining an application for an investor visa?",
+          "answer": "Membership of the applicant in the Foreign Investors' Council under the President of the Republic of Kazakhstan; - the applicant's possession of an investment contract concluded with the authorized investment body; - the applicant's possession of recommendations from state bodies or quasi-public sector entities confirming the applicant's implementation of an investment project on the territory of the Republic of Kazakhstan."
+        },
+        {
+          "question": "What are the main conditions required to receive special investment preferences?",
+          "answer": "Membership of the applicant in the Foreign Investors' Council under the President of the Republic of Kazakhstan."
+        },
+        {
+          "question": "What documents and confirmations are necessary for the official implementation of an investment project in the Republic of Kazakhstan?",
+          "answer": "The applicant's possession of an investment contract concluded with the authorized investment body."
+        },
+        {
+          "question": "How is the implementation of an investment project confirmed?",
+          "answer": "The applicant's possession of recommendations from state bodies or quasi-public sector entities confirming the applicant's implementation of an investment project on the territory of the Republic of Kazakhstan."
+        }
+      ]
+    },
+
+    "defense": {
+      "title": "Investor protection",
+      "button": "All legal norms"
+    },
+
+    "footer": {
+      "forInvestors": "For investors",
+      "navigate": "Site navigation",
+      "contacts": "Contacts",
+      "listInvestor": {
+        "guide": "Investor guide",
+        "opportunities": "Investment opportunities",
+        "map": "Investment map",
+        "regulations": "Regulations"
+      },
+      "listNavigate": {
+        "news": "News",
+        "sendRequest": "Send a request",
+        "defense": "Investor protection",
+        "aboutRegion": "About the region"
+      },
+      "contactItems": {
+        "homephone": "For home",
+        "phone": "For mobile",
+        "email": "Mail"
+      },
+      "bottom": {
+        "corruption": "Anti-corruption",
+        "development": "Developed by"
+      }
+    },
+    "PageNews": { "title": "All news" },
+
+    "NotFound": "Not found"
+  }
+}

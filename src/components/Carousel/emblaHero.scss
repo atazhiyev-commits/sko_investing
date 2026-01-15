@@ -1,0 +1,14 @@
+.embla-hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+
+  &__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+  }
+}

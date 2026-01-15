@@ -1,0 +1,125 @@
+.collapse-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+
+  &[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+
+  > ul {
+    overflow: hidden;
+    min-height: 0;
+  }
+}
+
+.btnaside {
+  width: 100%;
+
+  .buttonAside {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover .buttonAside__name {
+      color: #3b82f6;
+    }
+
+    &__name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 22px;
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+      transition: 0.2s;
+
+      .chevron {
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &[data-active="true"] .buttonAside .chevron {
+    transform: rotate(180deg);
+  }
+
+  .second {
+    background: #f9f9f9;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .second__li {
+      .item-header {
+        padding: 12px 22px;
+
+        &[data-color="true"] {
+          color: var(--color-lightBlue);
+        }
+
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+          background-color: #eee;
+        }
+
+        .chevron-small {
+          transition: transform 0.3s;
+          &.rotated {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .three {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+
+    .three__li {
+      &[data-color="true"] {
+        a {
+          color: var(--color-lightBlue);
+        }
+      }
+      a {
+        display: block;
+        padding: 10px 22px 10px 40px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: var(--color-lightBlue);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btnaside {
+    .buttonAside__name {
+      font-size: 15px;
+    }
+  }
+  .collapse-wrapper {
+    .item-header {
+      font-size: 14px;
+    }
+  }
+}

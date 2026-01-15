@@ -1,0 +1,166 @@
+.footer {
+  background-color: var(--color-darkBlue);
+
+  .title-footer {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    padding-block: 50px;
+    height: max-content;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+
+    .iconGlav {
+      display: flex;
+      gap: 10px;
+
+      img {
+        width: 54px;
+        height: 54px;
+      }
+    }
+
+    .socMedia {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+
+      a {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__menu {
+    height: max-content;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      gap: 24px;
+
+      .menu-item {
+        color: var(--color-white);
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__navigation {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .item-list {
+        color: var(--color-white);
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__contact {
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      color: var(--color-white);
+      .phone {
+        &-title {
+          font-weight: 500;
+          letter-spacing: 0.7px;
+        }
+
+        .number {
+          margin-top: 5px;
+          font-weight: 300;
+          letter-spacing: 0.7px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    &__menu {
+      .menu-item {
+        font-weight: 300;
+      }
+    }
+
+    &__icons {
+      display: none;
+    }
+
+    &__navigation {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__contact {
+      display: none;
+    }
+    &__menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+
+      .menu-item {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.footerBottom {
+  border-top: 1px solid var(--color-white);
+  background-color: var(--color-darkBlue);
+  color: white;
+  padding: 15px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__nameCompany {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+
+  &__csi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-block: 25px;
+    &__content {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+}

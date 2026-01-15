@@ -1,0 +1,49 @@
+.embla {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .embla__container {
+    display: flex;
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .embla__buttons {
+    .embla__prev,
+    .embla__next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-inline: 20px;
+
+      .iconBtn {
+        color: var(--color-white);
+      }
+    }
+
+    .embla__prev {
+      left: 0;
+    }
+    .embla__next {
+      right: 0;
+    }
+
+    button {
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      @media screen and (max-width: 600px) {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
