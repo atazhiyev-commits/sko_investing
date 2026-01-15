@@ -41,7 +41,7 @@ export default async function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Header />
+            <Header className="h" />
             {children}
             <Footer />
           </NextIntlClientProvider>
