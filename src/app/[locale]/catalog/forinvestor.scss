@@ -1,0 +1,47 @@
+.titleInvest {
+  font-weight: 600;
+
+  line-height: 30px;
+  color: #000000;
+}
+
+.faq-page {
+  &__content {
+    margin-top: 25px;
+  }
+
+  &__item {
+    .accord {
+      button {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.bank-page {
+    *{
+        text-align: justify;
+    }
+  li {
+    margin-top: 20px;
+  }
+  p {
+    margin-top: 10px;
+  }
+  h2, h3{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .titleInvest {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .titleInvest {
+    font-size: 15px;
+  }
+}

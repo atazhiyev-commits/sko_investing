@@ -1,6 +1,7 @@
+"use client"
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import type { HelperList } from "@/types/translateTypes";
 
 import Container from "@/components/container/Container";
@@ -15,10 +16,8 @@ interface HelperProps {
 }
 
 const Helper: React.FC<HelperProps> = ({ className }) => {
-  const { t } = useTranslation();
-  const listHelpText = t("helpers.list", {
-    returnObjects: true,
-  }) as Array<HelperList>;
+  const t = useTranslations();
+  const listHelpText = t.raw("helpers.list") as Array<any>;
 
   const [infoText, setInfoText] = useState(listHelpText[0]);
 

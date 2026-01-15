@@ -1,3 +1,4 @@
+"use client"
 import type { FC } from "react";
 
 // import { useTranslation } from "react-i18next";
@@ -5,33 +6,35 @@ import clsx from "clsx";
 import Container from "@/components/container/Container";
 
 import { Facebook, Instagram, Send } from "lucide-react";
-// import logo from "@/assets/images/logo/logo.svg";
-// import gerb from "@/assets/images/logo/gerb.svg";
+import logo from "@/assets/images/logo/logo.svg";
+import gerb from "@/assets/images/logo/gerb.svg";
 // import { lang } from "@/shared/store/lg";
 // import SocMedia from "@/sections/socMedia";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 interface Props {
   className?: string;
 }
 
 const FooterTop: FC<Props> = ({ className }) => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <footer className={clsx("footer", className)} id="contact">
+    <section className={clsx("footer", className)} id="contact">
       <Container>
         <div className="footer__inner">
           <div className="footer__icons">
             <div className="iconGlav">
               <div className="gerb">
                 <Link href={"https://primeminister.kz/"}>
-                  <img src={"gerb"} alt="Герб" />
+                  <Image src={gerb} alt="Герб" />
                 </Link>
               </div>
               <div className="logo">
                 <Link href={ "/"}>
-                  <img src={"logo"} alt="Логотип" />
+                  <Image src={logo} alt="Логотип" />
                 </Link>
               </div>
             </div>
@@ -44,17 +47,17 @@ const FooterTop: FC<Props> = ({ className }) => {
             <nav className="footer__menu-list">
               <li className="menu-item">
                 <Link href={ "/catalog/investor-guide"}>
-                  {("footer.listInvestor.guide")}
+                  {t("footer.listInvestor.guide")}
                 </Link>
               </li>
               <li className="menu-item">
                 <Link href={ "/catalog/investment-opportunities"}>
-                  {("footer.listInvestor.opportunities")}
+                  {t("footer.listInvestor.opportunities")}
                 </Link>
               </li>
               <li className="menu-item">
                 <Link href={ "/catalog/regulatory-acts"}>
-                  {("footer.listInvestor.regulations")}
+                  {t("footer.listInvestor.regulations")}
                 </Link>
               </li>
               <li className="menu-item">
@@ -113,7 +116,7 @@ const FooterTop: FC<Props> = ({ className }) => {
           </div>
         </div>
       </Container>
-    </footer>
+    </section>
   );
 };
 

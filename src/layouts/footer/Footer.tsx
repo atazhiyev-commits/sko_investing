@@ -12,10 +12,10 @@ interface Props {
 
 const Footer: FC<Props> = ({ className }) => {
   return (
-    <section className={clsx("footer", className)}>
+    <footer className={clsx("footer", className)}>
       <FooterUp />
       <FooterBottom />
-    </section>
+    </footer>
   );
 };
 

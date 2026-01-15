@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "@/i18n/navigation";
 
 import clsx from "clsx";
 
@@ -8,7 +9,6 @@ import HeaderDown from "./HeaderBottom";
 import Container from "@/components/container/Container";
 
 import "./header.scss";
-import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   className?: string;
@@ -16,7 +16,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ className }) => {
   const location = usePathname();
-  console.log(location)
 
   useEffect(() => {
     const header = document.querySelector(".header");
@@ -37,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
 
     window.addEventListener("scroll", applyState);
     return () => window.removeEventListener("scroll", applyState);
-  }, [location.pathname]);
+  }, [location]);
 
   return (
     <header className={clsx("header", className)}>

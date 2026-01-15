@@ -1,3 +1,11 @@
+@mixin clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: $line;
+}
+
 .hero {
   position: relative;
   min-height: 100dvh;

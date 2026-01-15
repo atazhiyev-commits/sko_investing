@@ -4,8 +4,9 @@ import clsx from "clsx";
 
 import Container from "@/components/container/Container";
 
-// import CSI from "@/assets/logo/CSI.svg";
+import CSI from "@/assets/logo/CSI.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   className?: string;
@@ -24,7 +25,7 @@ const FooterBottom: FC<Props> = ({ className }) => {
           </Link>
           <Link href={"https://csi.kz"} className="footerBottom__csi">
             <p className="textCSI">{("footer.bottom.development")}: </p>
-            <img src={"CSI"} alt="CSI logo" className="logo" />
+            <Image src={CSI} alt="CSI logo" className="logo" />
           </Link>
         </div>
       </Container>

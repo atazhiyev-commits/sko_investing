@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 import { lang } from "@/shared/store/lg";
 
@@ -21,7 +21,7 @@ const PageNewsCard: React.FC<PageNewsCardProps> = ({
 }) => {
   return (
     <Link
-      to={`/${lang}/news/item/${id}`}
+      href={`/${lang}/news/item/${id}`}
       className={clsx("PageNewsCard", className)}
       data-testid="PageNewsCard"
     >

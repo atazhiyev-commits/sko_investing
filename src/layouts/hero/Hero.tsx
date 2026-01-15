@@ -1,14 +1,15 @@
-import { Link } from "react-router";
-import { useTranslation } from "react-i18next";
+"use client";
+import { useTranslations } from "next-intl";
 import clsx from "clsx";
-import type { List } from "@/types/translateTypes";
+import Link from "next/link";
 
 import Container from "@/components/container/Container";
 import CarouselHero from "@/components/Carousel/CarouselHero";
 import { ChevronRight } from "lucide-react";
-import { useLang } from "@/shared/store/language";
+// import { useLang } from "@/shared/store/language";
 
 import { images } from "./backgroundImages";
+import { BottomItem } from "../header/HeaderBottom";
 
 import "./hero.scss";
 
@@ -17,8 +18,9 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ className }) => {
-  const { t } = useTranslation();
-  const listHero = t("hero.list", { returnObjects: true }) as Array<List>;
+  const t = useTranslations("hero");
+
+  const listHero = t.raw("list") as BottomItem[];
 
   return (
     <section className={clsx("hero", className)}>
@@ -33,15 +35,15 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
       <Container>
         <div className="hero__content">
-          <h1 className="hero__title">{t("hero.title")}</h1>
+          <h1 className="hero__title">{t("title")}</h1>
 
           <nav className="hero__content-nav">
-            <h2 className="title-section">{t("hero.Iwant")}</h2>
+            <h2 className="title-section">{t("Iwant")}</h2>
             <ul className="hero__ul">
-              {listHero.map((item, index: number) => (
+              {listHero.map((item: any, index: number) => (
                 <li className="item-hero" key={index}>
                   <ChevronRight />
-                  <Link to={"/" + useLang.lang + item.link}>{item.name}</Link>
+                  <Link href={"/" + "ru" + item.link}>{item.name}</Link>
                 </li>
               ))}
             </ul>

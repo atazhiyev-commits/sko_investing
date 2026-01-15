@@ -1,7 +1,7 @@
 import { type FC } from "react";
-import { Link } from "react-router";
 import clsx from "clsx";
-import type { List } from "@/types/translateTypes";
+import { Link } from "@/i18n/navigation";
+// import type { List } from "@/types/translateTypes";
 
 import "./dropDown.scss";
 
@@ -17,11 +17,11 @@ const DropDown: FC<Props> = ({ list, basePath, children, className }) => {
   return (
     <div className={clsx("dropDown", className)}>
       <div className="dropDown__content">
-        {list.map((item: List, index: number) => (
+        {list.map((item: any, index: number) => (
           <Link
-            to={basePath + item?.link}
+            href={basePath + item?.link}
             key={index}
-            state={{ name: item.name }}
+            // state={{ name: item.name }}
             className="dropDown__content-name"
           >
             {item.name}

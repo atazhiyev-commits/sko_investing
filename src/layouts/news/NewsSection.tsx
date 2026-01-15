@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router";
+import { Link } from "@/i18n/navigation";
 import { useTranslation } from "react-i18next";
 import { useGetNews } from "@/shared/store/newsCatalog";
 import type { NewsItem, storeType } from "@/types/api_news_types";
@@ -32,7 +32,7 @@ const NewsSection: React.FC<NewsProps> = ({ className }) => {
         <Container>
           <header className="news__header">
             <h2 className="title-section">{t("news.title")}</h2>
-            <Link to={"news/1"} className="btn-section">
+            <Link href={"news/1"} className="btn-section">
               {t("news.button")}
             </Link>
           </header>
@@ -54,7 +54,7 @@ const NewsSection: React.FC<NewsProps> = ({ className }) => {
                       if (index >= countNews) return null;
                       return (
                         <Link
-                          to={`news/item/${newsItem.documentId}`}
+                          href={`news/item/${newsItem.documentId}`}
                           key={index}
                           className="news__small-wrapper"
                         >

@@ -1,11 +1,11 @@
 import { useEffect, useState, type FC } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { lang } from "@/shared/store/lg";
 import type { ArrList } from "@/types/translateTypes";
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 
 import "./buttonAside.scss";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 
 interface Props {
   name: string;
@@ -19,13 +19,14 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   const [secondActive, setSecondActive] = useState<string>("");
   const [threeActive, setThreeActive] = useState<string>("");
 
-  const clean = (s: string) => s.replace("/", "");
-  
+
+  const clean = (s: string) => s.replace("/", "");  
+
   const toggleSecondLevel = (link: string) => {
     setSecondActive((prev) => (prev === link ? "" : link));
   };
 
-  const location = useLocation().pathname.split("/");
+  const location = (usePathname() || "").split("/");
   const last3 = location.at(3);
   const last4 = location.at(4);
   const last5 = location.at(5);
@@ -50,8 +51,8 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   return (
     <div className="btnaside" data-active={active}>
       <Link
-        state={{ name: name }}
-        to={`/${lang}/catalog${activeLink}`}
+        // state={{ name: name }}
+        href={`/${"catalog"}/${activeLink}`}
         className={clsx("buttonAside", className)}
         onClick={() => {
           if (list && list.length > 0) {
@@ -72,8 +73,8 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
           {list?.map((item, index) => (
             <li key={index} className="second__li">
               <Link
-                state={{ name: item.name }}
-                to={`/${lang}/catalog${activeLink}${item.link}`}
+                // state={{ name: item.name }}
+                href={`/${"catalog"}/${activeLink}${item.link}`}
                 className={clsx("item-header")}
                 data-color={secondActive === clean(item.link)}
                 onClick={() => {
@@ -97,27 +98,32 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
                   data-open={secondActive === clean(item.link)}
                 >
                   <ul className="three">
-                    {item.list.map((subItem, subIndex) => (
-                      <li
-                        key={subIndex}
-                        className="three__li"
-                        data-color={
-                          threeActive === subItem.link?.replace("/", "")
-                        }
-                      >
-                        <Link
-                          state={{ name: subItem.name }}
-                          className={clsx(
-                            last5 === subItem.link?.replace("/", "")
-                              ? "active"
-                              : ""
-                          )}
-                          to={`/${lang}/catalog${activeLink}${item.link}${subItem.link}`}
+                    {item.list.map(
+                      (
+                        subItem: { name: string; link: string },
+                        subIndex: number
+                      ) => (
+                        <li
+                          key={subIndex}
+                          className="three__li"
+                          data-color={
+                            threeActive === subItem.link?.replace("/", "")
+                          }
                         >
-                          {subItem.name}
-                        </Link>
-                      </li>
-                    ))}
+                          <Link
+                            // state={{ name: subItem.name }}
+                            className={clsx(
+                              last5 === subItem.link?.replace("/", "")
+                                ? "active"
+                                : ""
+                            )}
+                            href={`/${"catalog"}/${activeLink}${item.link}${subItem.link}`}
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
               )}

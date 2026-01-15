@@ -1,0 +1,69 @@
+:root {
+  --color-darkBlue: #003366;
+  --color-lightBlue: #60b6e3;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #9f9f9f;
+
+  --title-size: 32px;
+  --title-color: var(--color-black);
+  --title-weight: 700;
+
+  --media-tablet: 992px;
+}
+
+.title-section {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: var(--color-black);
+}
+
+.header-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.btn-section {
+  display: inline-block;
+  background-color: var(--color-darkBlue);
+  padding: 9px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 13px;
+
+  transition: 0.4s;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--color-lightBlue);
+  }
+}
+
+@mixin clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: $line;
+}
+
+@media screen and (max-width: 650px) {
+  .title-section {
+    font-size: 24px;
+  }
+
+  .btn-section {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title-section {
+    font-size: 20px;
+  }
+
+  .btn-section {
+    text-align: center;
+  }
+}

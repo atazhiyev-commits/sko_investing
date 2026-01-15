@@ -1,5 +1,5 @@
 import { type FC, useCallback } from "react";
-import { Link } from "react-router";
+import { Link } from "@/i18n/navigation";
 import useEmblaCarousel from "embla-carousel-react";
 import clsx from "clsx";
 import type { NewsItem } from "@/types/api_news_types";
@@ -35,7 +35,7 @@ const CarouselEmbla: FC<Props> = ({ newsList, countNews, className }) => {
           .slice(0, countNews)
           .map((newsItem: NewsItem, index: number) => (
             <div className="embla__slide" key={index}>
-              <Link to={`news/item/${newsItem.documentId}`}>
+              <Link href={`news/item/${newsItem.documentId}`}>
                 <BigImg
                   className="news__big"
                   title={newsItem.title_news}
