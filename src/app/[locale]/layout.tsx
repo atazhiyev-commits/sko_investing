@@ -16,6 +16,10 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   title: "sko_invest",
   description: "СЕВЕРО КАЗАХСТАНСКАЯ ОБЛАСТЬ",
+
+  verification: {
+    google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
+  },
 };
 
 export default async function RootLayout({
@@ -34,12 +38,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <meta
-          name="google-site-verification"
-          content="1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg"
-        />
-      </head>
       <body>
         <AppRouterCacheProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
