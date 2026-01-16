@@ -99,7 +99,7 @@
           },
           {
             "name": "Реализуемые инвестиционные проекты",
-            "link": "/ongoing-projects"
+            "link": "/realized-investment-projects"
           },
           {
             "name": "Завершенные инвестиционные проекты",
@@ -162,7 +162,7 @@
     "list": [
       {
         "name": "Получить земельный участок в аренду без торгов",
-        "link": "/catalog/investor-guide/land-plots/land-without-auction"
+        "link": "/catalog/investor-guide/gov-support/land-without-auction"
       },
       {
         "name": "Посмотреть меры поддержки",
@@ -170,15 +170,15 @@
       },
       {
         "name": "Банки второго уровня",
-        "link": "/catalog/investor-guide/business-registration/banks"
+        "link": "/catalog/about-region/banks"
       },
       {
         "name": "Реализовать инвестиционный проект",
-        "link": "/ongoing-projects"
+        "link": "/catalog/investment-opportunities/realized-investment-projects"
       },
       {
         "name": "Выбрать место для реализации проекта",
-        "link": "/ongoing-projects"
+        "link": "/catalog/about-region/region-info"
       }
     ]
   },

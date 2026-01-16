@@ -1,21 +1,4 @@
 .laws {
   width: 100%;
   display: block;
-
-  .titleLaw {
-    margin-bottom: 5px;
-    font-size: 24px;
-
-    &:not(:first-child) {
-      margin-top: 25px;
-    }
-  }
-
-  .listLaws {
-    margin-top: 20px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
 }

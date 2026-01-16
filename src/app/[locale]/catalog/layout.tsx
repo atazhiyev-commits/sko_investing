@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Link } from "@/i18n/navigation";
-import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 import Container from "@/components/container/Container";
@@ -8,9 +7,9 @@ import ButtonAside from "@/components/asideBtn";
 import type { LayoutType } from "@/types/translateTypes";
 
 import { MoveLeft } from "lucide-react";
+import CatalogPage from "./Catalog";
 
 import "./catalogcss.scss";
-import CatalogPage from "./Catalog";
 
 const Catalog = ({ children }: { children: React.ReactNode }) => {
   const t = useTranslations("header");
