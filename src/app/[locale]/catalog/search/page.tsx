@@ -29,8 +29,6 @@ const SearchCatalog: FC<Props> = ({ className }) => {
     .toLowerCase()
     .replace("+", "");
 
-  console.log(decoded);
-
   const clear = (name: string) => {
     return name.replace(" ", "").toLowerCase();
   };
@@ -105,7 +103,6 @@ const SearchCatalog: FC<Props> = ({ className }) => {
         {cataloglist.flatMap((item: any, index: number) => (
           <Fragment key={index}>
             <Link
-              // state={{ name: item.name }}
               href={`/catalog${item.link}`}
               className="resultText item-text"
             >

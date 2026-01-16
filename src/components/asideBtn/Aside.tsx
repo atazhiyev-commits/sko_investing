@@ -1,11 +1,13 @@
+"use client";
 import { useEffect, useState, type FC } from "react";
-import type { ArrList } from "@/types/translateTypes";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import type { ArrList } from "@/types/translateTypes";
+
 import { ChevronDown } from "lucide-react";
 
 import "./buttonAside.scss";
-import { Link } from "@/i18n/navigation";
-import { usePathname } from "next/navigation";
 
 interface Props {
   name: string;
@@ -19,8 +21,7 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   const [secondActive, setSecondActive] = useState<string>("");
   const [threeActive, setThreeActive] = useState<string>("");
 
-
-  const clean = (s: string) => s.replace("/", "");  
+  const clean = (s: string) => s.replace("/", "");
 
   const toggleSecondLevel = (link: string) => {
     setSecondActive((prev) => (prev === link ? "" : link));
@@ -51,7 +52,6 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   return (
     <div className="btnaside" data-active={active}>
       <Link
-        // state={{ name: name }}
         href={`/${"catalog"}/${activeLink}`}
         className={clsx("buttonAside", className)}
         onClick={() => {
@@ -73,7 +73,6 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
           {list?.map((item, index) => (
             <li key={index} className="second__li">
               <Link
-                // state={{ name: item.name }}
                 href={`/${"catalog"}/${activeLink}${item.link}`}
                 className={clsx("item-header")}
                 data-color={secondActive === clean(item.link)}
@@ -117,7 +116,9 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
                                 ? "active"
                                 : ""
                             )}
-                            href={`/${"catalog"}/${activeLink}${item.link}${subItem.link}`}
+                            href={`/${"catalog"}/${activeLink}${item.link}${
+                              subItem.link
+                            }`}
                           >
                             {subItem.name}
                           </Link>

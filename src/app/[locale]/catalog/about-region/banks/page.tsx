@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { type FC } from "react";
-import Markdown from "react-markdown";
 
 import "./page.scss";
 

@@ -17,7 +17,7 @@ interface HelperProps {
 
 const Helper: React.FC<HelperProps> = ({ className }) => {
   const t = useTranslations();
-  const listHelpText = t.raw("helpers.list") as Array<any>;
+  const listHelpText = t.raw("helpers.list") as Array<HelperList>;
 
   const [infoText, setInfoText] = useState(listHelpText[0]);
 

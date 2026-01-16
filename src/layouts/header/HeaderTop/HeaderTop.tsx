@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 
 import HeaderMenu from "./HeaderMenu";
 import SideMenu from "@/components/sideMenu";
@@ -12,7 +13,6 @@ import SocMedia from "@/section/socMedia";
 import Image from "next/image";
 
 import "./../header.scss";
-import { usePathname } from "@/i18n/navigation";
 
 const HeaderTop = () => {
   const [toggled, setToggled] = useState(false);
@@ -34,7 +34,7 @@ const HeaderTop = () => {
           />
         </form>
       </div>
-      <HeaderMenu link={"lang"} />
+      <HeaderMenu link={""} />
 
       <nav className="header__nav">
         <button

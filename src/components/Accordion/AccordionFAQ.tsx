@@ -6,14 +6,9 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-// import type { FAQlist } from "@/types/translateTypes";
+import type { FAQlist } from "@/types/translateTypes";
 
 import { ChevronDown } from "lucide-react";
-
-interface FAQlist {
-  question: string;
-  answer: string;
-}
 
 interface FAQProps extends FAQlist {
   className?: string;

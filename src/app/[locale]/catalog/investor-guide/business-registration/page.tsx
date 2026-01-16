@@ -1,14 +1,8 @@
 "use client";
-import clsx from "clsx";
 import { type FC } from "react";
+import clsx from "clsx";
 
 import PDFViewer from "@/components/PDF/PDFViewer";
-import { Document, Page, pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
 
 interface Props {
   className?: string;

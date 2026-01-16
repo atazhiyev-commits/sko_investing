@@ -22,11 +22,11 @@ const CarouselHero: FC<Props> = ({ imageList, className, classNameImg }) => {
   return (
     <div className={clsx("embla-hero", className)} ref={emblaRef}>
       <div className="embla-hero__container">
-        {imageList.map((image: string, index: number) => (
+        {imageList.map((image: { src: string }, index: number) => (
           <div
             key={index}
             className={classNameImg}
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ backgroundImage: `url(${image.src})` }}
           />
         ))}
       </div>

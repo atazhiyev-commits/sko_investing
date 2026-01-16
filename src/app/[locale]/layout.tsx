@@ -4,10 +4,11 @@ import { notFound } from "next/navigation";
 import { routing } from "@/../i18n/routing";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { getMessages } from "next-intl/server";
+
 import Header from "@/layouts/header";
+import Footer from "@/layouts/footer";
 
 import "@/styles/App.scss";
-import Footer from "@/layouts/footer";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

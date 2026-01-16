@@ -21,7 +21,6 @@ const DropDown: FC<Props> = ({ list, basePath, children, className }) => {
           <Link
             href={basePath + item?.link}
             key={index}
-            // state={{ name: item.name }}
             className="dropDown__content-name"
           >
             {item.name}

@@ -23,9 +23,6 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
       className={clsx("language", className)}
       onChange={(e) => {
         const newUrl = `${e.target.value}/${restPath}`;
-
-        console.log(newUrl)
-
         // i18n.changeLanguage(e.target.value);
         // navigate(newUrl);
         window.location.reload();

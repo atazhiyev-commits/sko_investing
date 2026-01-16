@@ -1,15 +1,14 @@
 "use client";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
-import Link from "next/link";
 
 import Container from "@/components/container/Container";
 import CarouselHero from "@/components/Carousel/CarouselHero";
+import { BottomItem } from "./../header/HeaderBottom";
 import { ChevronRight } from "lucide-react";
-// import { useLang } from "@/shared/store/language";
 
 import { images } from "./backgroundImages";
-import { BottomItem } from "../header/HeaderBottom";
 
 import "./hero.scss";
 

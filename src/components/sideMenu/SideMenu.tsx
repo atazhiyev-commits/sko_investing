@@ -2,9 +2,8 @@
 import { type FC } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-// import { lang } from "@/shared/store/lg";
 import { Menu, MenuItem } from "react-pro-sidebar";
-// import type { LayoutType } from "@/types/translateTypes";
+import type { LayoutType } from "@/types/translateTypes";
 import { useTranslations } from "next-intl";
 
 import { X } from "lucide-react";
@@ -26,7 +25,7 @@ const Sidebar = dynamic(
 
 const SideMenu: FC<Props> = ({ toggled, setToggled, children, className }) => {
   const t = useTranslations();
-  const nameBottom = t.raw("header.headerBottom") as Array<any>;
+  const nameBottom = t.raw("header.headerBottom") as Array<LayoutType>;
 
   return (
     <section className={clsx("sideMenu", className)}>

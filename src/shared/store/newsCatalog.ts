@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { getNews } from "@/api/connect";
-// import { lang } from "./lg";
 
 export const useGetNews = create((set, get) => ({
   news: [],

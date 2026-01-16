@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { usePathname } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 
 import clsx from "clsx";
 
@@ -21,8 +21,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     const header = document.querySelector(".header");
     if (!header) return;
 
-    const segments = location.split("/").filter(Boolean);
-    const isRoot = segments.length === 1;
+    const segments = location && location.split("/").filter(Boolean);
+    const isRoot = segments && segments.length === 1;
 
     const applyState = () => {
       if (!isRoot) {
