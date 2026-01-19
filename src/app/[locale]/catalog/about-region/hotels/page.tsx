@@ -1,14 +1,41 @@
 import clsx from "clsx";
-import { type FC } from "react";
+import { hotels } from "./hotels";
 
-interface Props {
-  className?: string;
-}
+import "./page.scss";
+import Link from "next/link";
 
-const Hotels: FC<Props> = ({ className }) => {
+const Hotels = () => {
   return (
     <>
-      <h2 className={clsx("catalog__hotels", className)}>Hotels</h2>
+      <h2 className={clsx("catalog__hotels")}></h2>
+      <table className="hotels-table">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Имя</th>
+            <th>Адрес</th>
+            <th>Контакты</th>
+            <th>E-mail</th>
+            <th>Сайт</th>
+          </tr>
+        </thead>
+        <tbody>
+          {hotels.map(({ id, name, address, phones, email, website }) => (
+            <tr key={id}>
+              <td>{id}</td>
+              <td>{name}</td>
+              <td>{address}</td>
+              <td>
+                {phones.map((phone, index) => (
+                  <div key={index}>{phone}</div>
+                ))}
+              </td>
+              <td>{email}</td>
+              {website && <Link href={website}> {website}</Link>}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };

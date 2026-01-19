@@ -14,13 +14,6 @@ const BusinessRegistration: FC<Props> = ({ className }) => {
       <h2 className={clsx("BusinessRegistration", className)}>
         Регистрация и бизнес
       </h2>
-      <PDFViewer src={"/example.pdf"} />
-      {/* <Document file="/example.pdf">
-        <Page
-          pageNumber={1}
-          width={800}
-        />
-      </Document> */}
     </>
   );
 };

@@ -19,8 +19,6 @@ const HeaderTop = () => {
   const t = useTranslations("header");
   const catalogPath = usePathname();
 
-  console.log(catalogPath)
-
   return (
     <div className="header__UP">
       <div className="header__search">
