@@ -120,14 +120,7 @@
         "label": "Нормативные правовые акты",
         "link": "/regulatory-acts",
         "list": [
-          { "name": "Законы", "link": "/laws" },
-          { "name": "Кодексы", "link": "/codes" },
-          {
-            "name": "Постановления Правительства РК",
-            "link": "/government-resolutions"
-          },
-          { "name": "Приказы ЦГО", "link": "/cgo-orders" },
-          { "name": "Постановление е Акимата", "link": "/akimat-resolutions" }
+          { "name": "Постановление е Акимата", "link": "/eakimat-resolutions" }
         ]
       },
 
