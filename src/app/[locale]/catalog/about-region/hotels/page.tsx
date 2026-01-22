@@ -15,8 +15,7 @@ const Hotels = () => {
             <th>Имя</th>
             <th>Адрес</th>
             <th>Контакты</th>
-            <th>E-mail</th>
-            {/* <th>Сайт</th> */}
+            <th>E-mail и сайт</th>
           </tr>
         </thead>
         <tbody>
