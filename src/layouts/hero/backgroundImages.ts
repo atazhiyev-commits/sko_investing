@@ -6,4 +6,4 @@ import img4 from "@/assets/images/background/5.jpg";
 import img5 from "@/assets/images/background/6.jpeg";
 import img6 from "@/assets/images/background/7.jpeg";
 
-export const images = [img, img1, img2, img3, img4, img5, img6];
+export const images = [img];
