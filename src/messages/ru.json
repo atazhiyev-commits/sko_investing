@@ -10,7 +10,7 @@
     "goto": "На главную",
 
     "headerBottom": [
-      {
+      { 
         "label": "Путеводитель инвестора",
         "link": "/investor-guide",
         "list": [

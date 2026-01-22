@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skoinvesting.vercel.app/ru
+
+# Sitemaps
+Sitemap: https://skoinvesting.vercel.app/ru/sitemap.xml
