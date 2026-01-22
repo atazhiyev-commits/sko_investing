@@ -25,16 +25,14 @@
   a {
     display: block;
     height: max-content;
+    border-bottom: none;
+    padding: 0;
+    margin-top: 15px;
+
+    color: var(--color-lightBlue);
   }
 
   td,
-  a {
-    padding: 14px 16px;
-    vertical-align: top;
-    color: #4a5568;
-    border-bottom: 1px solid #edf2f7;
-  }
-
   tbody tr {
     transition: background-color 0.2s ease;
 
@@ -74,37 +72,17 @@
 }
 
 @media (max-width: 768px) {
-  .banks-table {
+  .hotels-table {
     font-size: 13px;
 
-    thead {
+    td,
+    a {
+      border: none;
+      display: block;
+    }
+
+    td:first-child {
       display: none;
-    }
-
-    tr {
-      display: block;
-      border-bottom: 1px solid #e2e8f0;
-      margin-bottom: 16px;
-    }
-
-    td a {
-      display: block;
-      padding: 10px 14px;
-      border-bottom: none;
-
-      &:first-child {
-        display: none;
-      }
-
-      &:nth-child(2) {
-        font-size: 15px;
-        font-weight: 600;
-        color: #1a202c;
-      }
-
-      &:nth-child(3) {
-        color: #4a5568;
-      }
     }
   }
 }

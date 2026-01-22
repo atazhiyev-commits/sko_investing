@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { hotels } from "./hotels";
+import Link from "next/link";
 
 import "./page.scss";
-import Link from "next/link";
 
 const Hotels = () => {
   return (
@@ -16,7 +16,7 @@ const Hotels = () => {
             <th>Адрес</th>
             <th>Контакты</th>
             <th>E-mail</th>
-            <th>Сайт</th>
+            {/* <th>Сайт</th> */}
           </tr>
         </thead>
         <tbody>
@@ -25,13 +25,16 @@ const Hotels = () => {
               <td>{id}</td>
               <td>{name}</td>
               <td>{address}</td>
-              <td>
+              <td className="td-phones">
                 {phones.map((phone, index) => (
                   <div key={index}>{phone}</div>
                 ))}
               </td>
-              <td>{email}</td>
-              {website && <Link href={website}> {website}</Link>}
+              <td>
+                {email}
+                {website && <Link href={website}> {website}</Link>}
+              </td>
+
             </tr>
           ))}
         </tbody>
