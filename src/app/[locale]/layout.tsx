@@ -15,8 +15,8 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "sko_invest",
-  description: "СЕВЕРО КАЗАХСТАНСКАЯ ОБЛАСТЬ",
+  title: "Северо Казахстанская область - инвестиционный портал",
+  description: "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости",
 
   verification: {
     google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",

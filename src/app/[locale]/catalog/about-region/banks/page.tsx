@@ -2,16 +2,30 @@ import clsx from "clsx";
 import { type FC } from "react";
 
 import "./page.scss";
+import { Metadata } from "next";
 
 interface Props {
   className?: string;
 }
 
+export const metadata: Metadata = {
+  title: "Банки второго уровня в Петропавловске и СКО | Список и контакты",
+  description: "Актуальный справочник банков второго уровня (БВУ) в Северо-Казахстанской области. Адреса, прямые контакты и финансовые услуги для инвесторов и бизнеса.",
+
+  verification: {
+    google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
+  },
+  alternates: {
+    canonical: 'https://invest-sko.kz/banks',
+  }
+};
+
+
 const Banks: FC<Props> = ({ className }) => {
   return (
     <div className="bank-page">
       <h2 className={clsx("bank-page__title", className)}>
-        Банки второго уровня
+        Банки второго уровня в СКО
       </h2>
       <div className="bank-page__content">
         <table className="banks-table">
