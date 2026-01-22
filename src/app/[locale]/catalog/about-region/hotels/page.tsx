@@ -30,11 +30,12 @@ const Hotels = () => {
                   <div key={index}>{phone}</div>
                 ))}
               </td>
-              <td>
+              <td className="desktop">
                 {email}
                 {website && <Link href={website}> {website}</Link>}
               </td>
-
+              <Link className="mobile" href={`mailto:${email}`}>mail</Link>
+              {website && <Link className="mobile" href={website}> {website}</Link>}
             </tr>
           ))}
         </tbody>

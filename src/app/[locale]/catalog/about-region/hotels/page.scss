@@ -1,8 +1,8 @@
 .hotels-table {
   margin-top: 15px;
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
@@ -19,17 +19,20 @@
     font-weight: 600;
     color: #2d3748;
     border-bottom: 1px solid #e2e8f0;
-    white-space: nowrap;
   }
+
 
   a {
     display: block;
     height: max-content;
     border-bottom: none;
-    padding: 0;
     margin-top: 15px;
 
     color: var(--color-lightBlue);
+  }
+
+  .mobile {
+    display: none;
   }
 
   td,
@@ -47,7 +50,6 @@
 
   td:first-child,
   th:first-child {
-    width: 48px;
     text-align: center;
     color: #718096;
     font-weight: 500;
@@ -56,7 +58,6 @@
   td:nth-child(2) {
     font-weight: 600;
     color: #2d3748;
-    min-width: 240px;
   }
 
   td:nth-child(3),
@@ -75,8 +76,23 @@
   .hotels-table {
     font-size: 13px;
 
+    tr {
+      padding-bottom: 16px;
+    }
+
+    .desktop{
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+      margin-top: 0;
+      padding-block: 0;
+    }
+
     td,
     a {
+      padding-block: 7px;
       border: none;
       display: block;
     }
