@@ -1,0 +1,14 @@
+.businessRegistration {
+  &__content {
+    .business-text {
+      text-align: justify;
+    }
+
+    .business-table {
+      .link-table {
+        border-bottom: none;
+        color: red;
+      }
+    }
+  }
+}

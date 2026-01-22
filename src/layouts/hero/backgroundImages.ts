@@ -1,7 +1,9 @@
-import img from "@/assets/images/background/back.png";
-import img1 from "@/assets/images/background/image2.svg";
-import img3 from "@/assets/images/background/image4.svg";
-import img2 from "@/assets/images/background/image3.svg";
-import image from "@/assets/images/background/image.jpg";
+import img from "@/assets/images/background/1.jpeg";
+import img1 from "@/assets/images/background/2.jpg";
+import img2 from "@/assets/images/background/3.jpeg";
+import img3 from "@/assets/images/background/4.jpg";
+import img4 from "@/assets/images/background/5.jpg";
+import img5 from "@/assets/images/background/6.jpeg";
+import img6 from "@/assets/images/background/7.jpeg";
 
-export const images = [img, img1, img2, img3, image];
+export const images = [img, img1, img2, img3, img4, img5, img6];
