@@ -1,3 +1,11 @@
+@mixin clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: $line;
+}
+
 .SmallImg {
   max-width: 100%;
   border-radius: 5px;

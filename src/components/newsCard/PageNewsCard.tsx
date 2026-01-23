@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
-import { lang } from "@/shared/store/lg";
 
 import "./newsCard.scss";
 
@@ -21,7 +20,7 @@ const PageNewsCard: React.FC<PageNewsCardProps> = ({
 }) => {
   return (
     <Link
-      href={`/${lang}/news/item/${id}`}
+      href={`/news/item/${id}`}
       className={clsx("PageNewsCard", className)}
       data-testid="PageNewsCard"
     >

@@ -1,0 +1,23 @@
+.page-news {
+  padding-block: 107px;
+  flex: 1;
+  color: black;
+
+  &__content {
+    margin-top: 20px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+
+    margin-top: 20px;
+  }
+
+  .pagination-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+}

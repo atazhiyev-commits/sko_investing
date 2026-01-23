@@ -1,5 +1,5 @@
 import clsx from "clsx";
-
+import "@/styles/variable.scss"
 import "./small.scss";
 
 interface SmallCardProps {
