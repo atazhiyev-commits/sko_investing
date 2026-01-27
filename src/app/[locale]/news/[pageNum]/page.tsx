@@ -1,6 +1,6 @@
 "use client"
 import { Fragment, useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import clsx from "clsx";
 import { useParams } from "next/navigation";
 import useGetNews from "@/shared/store/newsCatalog";
@@ -11,12 +11,13 @@ import PageNewsCard from "@/components/newsCard/PageNewsCard";
 import Pagination from "@mui/material/Pagination";
 import ErrorPage from "@/layouts/error/ErrorPage";
 import NewsSkeleton from "@/components/Skeleton/newsSkeleton";
-
-import "./news.scss";
 import { useRouter } from "@/i18n/navigation";
 
+import "./news.scss";
+
 const News = () => {
-    const router = useRouter();
+  const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations();
   const [isLoading, setIsLoading] = useState(true);
   const { news, fetchNews } = useGetNews() as storeType;
@@ -27,8 +28,9 @@ const News = () => {
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
+
       try {
-        await fetchNews(activePage as any);
+        await fetchNews(locale, activePage);
       } catch (error) {
         console.error("Ошибка при загрузке новостей", error);
       } finally {

@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     if (!header) return;
 
     const segments = location && location.split("/").filter(Boolean);
-    const isRoot = segments && segments.length === 1;
+    const isRoot = segments && segments.length > 0;
 
     const applyState = () => {
       if (isRoot) {

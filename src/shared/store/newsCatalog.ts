@@ -5,7 +5,7 @@ export const useGetNews = create((set, get) => ({
   news: [],
   cache: {},
 
-  fetchNews: async (totalPage: number) => {
+  fetchNews: async (lang: string, totalPage: number) => {
     const { cache } = get() as any;
 
     if (cache[totalPage]) {
@@ -13,7 +13,7 @@ export const useGetNews = create((set, get) => ({
       return;
     }
 
-    const response = await getNews("ru", totalPage);
+    const response = await getNews(lang, totalPage);
     set((state: any) => ({
       news: response,
       cache: {

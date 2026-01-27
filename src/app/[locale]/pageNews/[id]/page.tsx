@@ -9,15 +9,17 @@ import Container from "@/components/container/Container";
 import PageNewsSkeleton from "@/components/Skeleton/pageNewsSkeleton";
 
 import "./pagenews.scss";
+import { useLocale } from "next-intl";
 
 const PageNews = () => {
   const params = useParams();
+  const locale = useLocale();
   const id = params?.id;
   const [pageNews, setPageNews] = useState<NewsItem>();
 
   useEffect(() => {
     const connect_api = async () => {
-      const res = await getIdNews(id as any, "ru").then(
+      const res = await getIdNews(id as any, locale).then(
         (res) => res.data
       );
       setPageNews(res);
