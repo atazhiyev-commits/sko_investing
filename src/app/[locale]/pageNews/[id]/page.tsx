@@ -26,7 +26,7 @@ const PageNews = () => {
     };
 
     connect_api();
-  }, []);
+  }, [locale]);
 
   return pageNews ? (
     <section className="pageNews">

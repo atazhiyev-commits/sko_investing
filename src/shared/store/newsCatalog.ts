@@ -7,9 +7,10 @@ export const useGetNews = create((set, get) => ({
 
   fetchNews: async (lang: string, totalPage: number) => {
     const { cache } = get() as any;
+    const cacheKey = `${lang}-${totalPage}`;
 
-    if (cache[totalPage]) {
-      set({ news: cache[totalPage] });
+    if (cache[cacheKey]) {
+      set({ news: cache[cacheKey] });
       return;
     }
 
@@ -18,7 +19,7 @@ export const useGetNews = create((set, get) => ({
       news: response,
       cache: {
         ...state.cache,
-        [totalPage]: response,
+        [cacheKey]: response,
       },
     }));
   },

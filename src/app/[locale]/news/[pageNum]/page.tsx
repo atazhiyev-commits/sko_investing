@@ -39,7 +39,7 @@ const News = () => {
     };
 
     loadData();
-  }, [fetchNews, activePage]);
+  }, [fetchNews, activePage, locale]);
 
   return (
     <section className={clsx("page-news")}>

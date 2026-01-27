@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from "react";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useGetNews } from "@/shared/store/newsCatalog";
 import type { NewsItem, storeType } from "@/types/api_news_types";
@@ -20,12 +20,13 @@ interface NewsProps {
 
 const NewsSection: React.FC<NewsProps> = ({ className }) => {
   const t = useTranslations();
+  const locale = useLocale();
   const { news, fetchNews } = useGetNews() as storeType;
   const countNews = 4;
 
   useEffect(() => {
-    fetchNews(1);
-  }, [fetchNews]);
+    fetchNews(locale, 1);
+  }, [fetchNews, locale]);
 
   return (
     news && (
