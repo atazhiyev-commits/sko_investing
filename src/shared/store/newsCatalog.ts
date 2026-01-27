@@ -13,7 +13,7 @@ export const useGetNews = create((set, get) => ({
       return;
     }
 
-    const response = await getNews("ru", 1);
+    const response = await getNews("ru", totalPage);
     set((state: any) => ({
       news: response,
       cache: {

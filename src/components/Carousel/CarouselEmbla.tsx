@@ -35,7 +35,7 @@ const CarouselEmbla: FC<Props> = ({ newsList, countNews, className }) => {
           .slice(0, countNews)
           .map((newsItem: NewsItem, index: number) => (
             <div className="embla__slide" key={index}>
-              <Link href={`news/item/${newsItem.documentId}`}>
+              <Link href={`/pageNews/${newsItem.documentId}`}>
                 <BigImg
                   className="news__big"
                   title={newsItem.title_news}

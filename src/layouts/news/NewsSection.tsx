@@ -1,10 +1,10 @@
 "use client"
 import { useEffect } from "react";
+import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useGetNews } from "@/shared/store/newsCatalog";
 import type { NewsItem, storeType } from "@/types/api_news_types";
-import { useTranslations } from "next-intl";
-import clsx from "clsx";
 
 import Container from "@/components/container/Container";
 import CarouselEmbla from "@/components/Carousel/CarouselEmbla";
@@ -33,7 +33,7 @@ const NewsSection: React.FC<NewsProps> = ({ className }) => {
         <Container>
           <header className="news__header">
             <h2 className="title-section">{t("news.title")}</h2>
-            <Link href="/news" className="btn-section">
+            <Link href="/news/1" className="btn-section">
               {t("news.button")}
             </Link>
           </header>
@@ -55,7 +55,7 @@ const NewsSection: React.FC<NewsProps> = ({ className }) => {
                       if (index >= countNews) return null;
                       return (
                         <Link
-                          href={`/news/item/${newsItem.documentId}`}
+                          href={`/pageNews/${newsItem.documentId}`}
                           key={index}
                           className="news__small-wrapper"
                         >

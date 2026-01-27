@@ -20,7 +20,7 @@ const PageNewsCard: React.FC<PageNewsCardProps> = ({
 }) => {
   return (
     <Link
-      href={`/news/item/${id}`}
+      href={`/pageNews/${id}`}
       className={clsx("PageNewsCard", className)}
       data-testid="PageNewsCard"
     >

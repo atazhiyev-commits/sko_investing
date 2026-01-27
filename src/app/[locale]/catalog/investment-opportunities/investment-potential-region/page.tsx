@@ -23,7 +23,7 @@ const InvestmentOpportunities: FC<Props> = ({ className }) => {
         <BtnLink name="Слайд 2" src="?tisers=FLAX-PROCESSING" />
         <BtnLink name="Слайд 3" src="?tisers=PASSENGER-AND-FREIGHT" />
         <BtnLink name="Слайд 4" src="?tisers=PASTA-PRODUCTION" />
-        <h3 className="titleLaw">Text</h3>
+        <h3 className="titleLaw">Слайд</h3>
       </div>
       <PDFViewer src={"/pdf/tisers/" + searchQuery + ".pdf"} />
     </div>

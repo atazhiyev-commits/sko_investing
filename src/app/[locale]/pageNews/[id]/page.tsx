@@ -11,7 +11,8 @@ import PageNewsSkeleton from "@/components/Skeleton/pageNewsSkeleton";
 import "./pagenews.scss";
 
 const PageNews = () => {
-  const id = useParams();
+  const params = useParams();
+  const id = params?.id;
   const [pageNews, setPageNews] = useState<NewsItem>();
 
   useEffect(() => {

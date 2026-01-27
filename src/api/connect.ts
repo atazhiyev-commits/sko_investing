@@ -9,7 +9,7 @@ const api = axios.create({
 
 export const getNews = async (locale: string, totalPage: number) => {
   const res = await api.get(
-    `/muchnews?locale=${locale}&populate=*&pagination[page]=${totalPage}&pagination[pageSize]=${9}`,
+    `/muchnews?locale=${locale}&populate=*&pagination[page]=${totalPage}&pagination[pageSize]=${8}`,
   );
   return res.data;
 };
