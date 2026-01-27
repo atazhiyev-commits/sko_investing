@@ -15,8 +15,22 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
+  applicationName: 'SKO Investing',
+
   title: "Северо Казахстанская область - инвестиционный портал",
   description: "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости",
+
+  openGraph: {
+    // Название сайта в соцсетях и над ссылкой в поиске
+    siteName: 'SKO Investing',
+    title: 'ИНВЕСТИРУЙТЕ В СЕВЕРО-КАЗАХСТАНСКУЮ ОБЛАСТЬ',
+    description: 'Инвестиционный портал СКО',
+    type: 'website',
+  },
+
+  appleWebApp: {
+    title: 'SKO Investing',
+  },
 
   verification: {
     google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
