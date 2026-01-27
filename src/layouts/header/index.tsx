@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 
 import clsx from "clsx";
 
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     const isRoot = segments && segments.length === 1;
 
     const applyState = () => {
-      if (!isRoot) {
+      if (isRoot) {
         header.classList.add("blue");
       } else {
         header.classList.toggle("blue", window.scrollY > 20);

@@ -89,8 +89,10 @@
 
   @media screen and (max-width: 520px) {
     &__content {
+      margin-top: 180px;
+      
       .hero__title {
-        font-size: 24px;
+        font-size: 20px;
       }
 
       &-nav {

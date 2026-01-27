@@ -1,11 +1,11 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import type { FAQlist } from "@/types/translateTypes";
 
 import AccordionFAQ from "@/components/Accordion/AccordionFAQ";
 import Container from "@/components/container/Container";
 
 import "./faq.scss";
-import { useTranslations } from "next-intl";
 
 interface faqSectionProps {
   className?: string;
@@ -13,7 +13,7 @@ interface faqSectionProps {
 
 const FAQ: React.FC<faqSectionProps> = ({ className }) => {
   const t = useTranslations();
-  const res = t.raw("faq.list") as Array<any>;
+  const res = t.raw("faq.list") as Array<FAQlist>;
   const max = 3;
 
   return (

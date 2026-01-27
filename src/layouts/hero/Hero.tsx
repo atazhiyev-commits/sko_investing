@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
 
@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               {listHero.map((item: any, index: number) => (
                 <li className="item-hero" key={index}>
                   <ChevronRight />
-                  <Link href={"/" + "ru" + item.link}>{item.name}</Link>
+                  <Link href={"/" + item.link}>{item.name}</Link>
                 </li>
               ))}
             </ul>

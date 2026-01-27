@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 import Hero from "@/layouts/hero";
 import Helper from "@/layouts/helpers";
@@ -18,13 +17,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const t = await getTranslations("header");
 
   return (
     <div className={`app`}>
       <Hero />
       <main className="main">
-        <NewsSection />
+        {/* <NewsSection /> */}
         <Helper />
         <FAQ />
         <Defense />

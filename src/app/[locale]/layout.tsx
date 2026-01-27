@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/../i18n/routing";
+import { routing } from "@/i18n/routing";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { getMessages } from "next-intl/server";
 
@@ -42,7 +42,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <AppRouterCacheProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
             <Footer />

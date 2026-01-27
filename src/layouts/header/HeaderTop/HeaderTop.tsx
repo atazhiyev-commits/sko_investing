@@ -13,6 +13,7 @@ import SocMedia from "@/section/socMedia";
 import Image from "next/image";
 
 import "./../header.scss";
+import LocaleSwitcher from "@/shared/ui/LanguageSwitcher";
 
 const HeaderTop = () => {
   const [toggled, setToggled] = useState(false);
@@ -47,7 +48,7 @@ const HeaderTop = () => {
           <button className="eyes" onClick={() => {}}>
             <Eye size={24} />
           </button>
-          {/* <LanguageSwitcher /> */}
+          <LocaleSwitcher />
         </ul>
         <div className="header__logo">
           <Link href={"/"} className="header__logo-link">

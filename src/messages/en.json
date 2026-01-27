@@ -1,5 +1,5 @@
 {
-  "translation": {
+
     "header": {
       "seacrhPlaceholder": "search",
       "headerMenu": {
@@ -294,7 +294,7 @@
       "listInvestor": {
         "guide": "Investor guide",
         "opportunities": "Investment opportunities",
-        "map": "Investment map",
+        "aboutRegion": "aboutRegion",
         "regulations": "Regulations"
       },
       "listNavigate": {
@@ -317,4 +317,4 @@
 
     "NotFound": "Not found"
   }
-}
+
