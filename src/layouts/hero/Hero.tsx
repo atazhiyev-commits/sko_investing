@@ -35,14 +35,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <Container>
         <div className="hero__content">
           <h1 className="hero__title">{t("title")}</h1>
-
           <nav className="hero__content-nav">
             <h2 className="title-section">{t("Iwant")}</h2>
             <ul className="hero__ul">
               {listHero.map((item: any, index: number) => (
                 <li className="item-hero" key={index}>
                   <Dot strokeWidth={3.8} />
-                  <Link href={"/" + item.link}>{item.name}</Link>
+                  <Link href={item.link}>{item.name}</Link>
                 </li>
               ))}
             </ul>

@@ -1,11 +1,11 @@
 "use client";
 import { type FC } from "react";
+import Link from "next/link";
 import clsx from "clsx";
+import PDFViewer from "@/components/PDF/PDFViewer";
 
 import "./page.scss";
 
-import PDFViewer from "@/components/PDF/PDFViewer";
-import Link from "next/link";
 
 interface Props {
   className?: string;

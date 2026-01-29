@@ -1,9 +1,9 @@
+import { Metadata } from "next";
 import Hero from "@/layouts/hero";
 import Helper from "@/layouts/helpers";
 import FAQ from "@/section/faq";
 import Defense from "@/section/defense";
 import { getTranslations } from "next-intl/server";
-import { Metadata } from "next";
 import NewsSection from "@/layouts/news";
 
 export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> => {
@@ -28,7 +28,7 @@ export default async function Home() {
     <div className={`app`}>
       <Hero />
       <main className="main">
-        <NewsSection />
+        {/* <NewsSection /> */}
         <Helper />
         <FAQ />
         <Defense />

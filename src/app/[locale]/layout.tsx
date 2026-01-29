@@ -9,7 +9,6 @@ import Header from "@/layouts/header";
 import Footer from "@/layouts/footer";
 
 import "@/styles/App.scss";
-import { title } from "process";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
