@@ -1,13 +1,14 @@
 "use client";
 import { useEffect, useState, type FC } from "react";
-import { Link } from "@/i18n/navigation";
-import { usePathname } from "next/navigation";
+
 import clsx from "clsx";
 import type { ArrList } from "@/types/translateTypes";
 
 import { ChevronDown } from "lucide-react";
 
 import "./buttonAside.scss";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 
 interface Props {
   name: string;
@@ -28,26 +29,26 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   };
 
   const location = (usePathname() || "").split("/");
+  const last2 = location.at(2);
   const last3 = location.at(3);
   const last4 = location.at(4);
-  const last5 = location.at(5);
 
   useEffect(() => {
-    setSecondActive(last4 ? clean(last4) : "");
-    setThreeActive(last5 ? clean(last5) : "");
+    setSecondActive(last3 ? clean(last3) : "");
+    setThreeActive(last4 ? clean(last4) : "");
 
     const link = activeLink.replace("/", "");
 
-    setActive(link === last3);
-  }, [last3, last4, last5]);
+    setActive(link === last2);
+  }, [last2, last3, last4]);
 
   useEffect(() => {
-    if (secondActive === last3) {
+    if (secondActive === last2) {
+      setSecondActive(clean(last2));
+    } else if (secondActive === last3) {
       setSecondActive(clean(last3));
-    } else if (secondActive === last4) {
-      setSecondActive(clean(last4));
     }
-  }, [last4, last3]);
+  }, [last3, last2]);
 
   return (
     <div className="btnaside" data-active={active}>
@@ -110,15 +111,13 @@ const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
                           }
                         >
                           <Link
-                            // state={{ name: subItem.name }}
                             className={clsx(
-                              last5 === subItem.link?.replace("/", "")
+                              last4 === subItem.link?.replace("/", "")
                                 ? "active"
                                 : ""
                             )}
-                            href={`/${"catalog"}/${activeLink}${item.link}${
-                              subItem.link
-                            }`}
+                            href={`/${"catalog"}/${activeLink}${item.link}${subItem.link
+                              }`}
                           >
                             {subItem.name}
                           </Link>

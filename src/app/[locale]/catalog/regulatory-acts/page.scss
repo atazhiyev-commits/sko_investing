@@ -1,4 +1,22 @@
 .laws {
   width: 100%;
-  display: block;
+
+  .title-section {
+    font-size: 32px;
+  }
+
+  .listLaws {
+    margin-top: 10px;
+  }
+
+  .block_laws {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .title_law {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  }
 }

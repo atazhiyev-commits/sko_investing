@@ -13,6 +13,17 @@ export interface FAQtype {
   list: Array<FAQlist>;
 }
 
+export interface LawType {
+  map: any;
+  title: string;
+  laws: Array<LawList>;
+}
+
+type LawList = {
+  name: string;
+  src: string;
+};
+
 export type ArrList = {
   name: string;
   link: string;

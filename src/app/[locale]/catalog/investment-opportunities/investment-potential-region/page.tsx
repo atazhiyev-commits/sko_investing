@@ -4,6 +4,9 @@ import clsx from "clsx";
 import { BtnLink } from "@/components/btnLink/BtnLink";
 import PDFViewer from "@/components/PDF/PDFViewer";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
+
+import "./page.scss";
 
 interface Props {
   className?: string;
@@ -12,6 +15,8 @@ interface Props {
 const InvestmentOpportunities: FC<Props> = ({ className }) => {
   const searchParams = useSearchParams();
   const searchQuery = (searchParams && searchParams.get("tisers")) || "";
+  const t = useTranslations("catalog.opportunities");
+  const tisers = t.raw("tisers");
 
   return (
     <div className={clsx("InvestmentOpportunities", className)}>
@@ -19,12 +24,11 @@ const InvestmentOpportunities: FC<Props> = ({ className }) => {
         Инвестиционный потенциал региона
       </h2>
       <div className="listLaws">
-        <BtnLink name="Слайд 1" src="?tisers=FERTILIZER-AND-PESTICIDE" />
-        <BtnLink name="Слайд 2" src="?tisers=FLAX-PROCESSING" />
-        <BtnLink name="Слайд 3" src="?tisers=PASSENGER-AND-FREIGHT" />
-        <BtnLink name="Слайд 4" src="?tisers=PASTA-PRODUCTION" />
-        <h3 className="titleLaw">Слайд</h3>
+        {tisers.map((tiser: { name: string; link: string }, index: number) => (
+          <BtnLink key={index} name={tiser.name} src={`?tisers=${tiser.link}`} />
+        ))}
       </div>
+      <h3 className="titleLaw">Слайд</h3>
       <PDFViewer src={"/pdf/tisers/" + searchQuery + ".pdf"} />
     </div>
   );

@@ -1,19 +1,25 @@
 .btnLink {
-  background-color: var(--color-lightBlue);
+  background-color: var(--color-white);
   text-align: left;
 
   border-radius: 4px;
   transition: background-color 0.3s;
   padding-block: 15px;
   padding-inline-start: 15px;
-  
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+
   &:hover {
-    background-color: var(--color-darkBlue);
+    background-color: var(--color-lightBlue);
+
+    .btnLink__text {
+      color: var(--color-white);
+    }
   }
 
   &__text {
-    color: var(--color-white);
+    color: var(--color-lightBlue);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
   }
 }

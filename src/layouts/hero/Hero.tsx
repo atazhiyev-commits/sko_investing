@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Container from "@/components/container/Container";
 import CarouselHero from "@/components/Carousel/CarouselHero";
 import { BottomItem } from "./../header/HeaderBottom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Dot } from "lucide-react";
 
 import { images } from "./backgroundImages";
 
@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             <ul className="hero__ul">
               {listHero.map((item: any, index: number) => (
                 <li className="item-hero" key={index}>
-                  <ChevronRight />
+                  <Dot strokeWidth={3.8} />
                   <Link href={"/" + item.link}>{item.name}</Link>
                 </li>
               ))}

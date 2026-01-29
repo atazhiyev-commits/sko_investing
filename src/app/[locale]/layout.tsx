@@ -3,39 +3,44 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 
 import Header from "@/layouts/header";
 import Footer from "@/layouts/footer";
 
 import "@/styles/App.scss";
+import { title } from "process";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  applicationName: 'SKO Investing',
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  title: "Северо Казахстанская область - инвестиционный портал",
-  description: "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости",
+  return {
+    applicationName: 'SKO Investing',
+    authors: [{ name: 'CSI' }, { name: 'CSI', url: 'https://csi.kz' }],
+    creator: 'Smart Derek',
+    generator: 'Next.js',
+    publisher: 'Smart Derek',
+    icons: {
+      icon: '/favicon_small.png',
+    },
+    verification: {
+      google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
+      yandex: "5c4086505fb4b8db",
+    },
+    openGraph: {
+      siteName: 'SKO Investing',
+      type: 'website',
+    },
 
-  openGraph: {
-    // Название сайта в соцсетях и над ссылкой в поиске
-    siteName: 'SKO Investing',
-    title: 'ИНВЕСТИРУЙТЕ В СЕВЕРО-КАЗАХСТАНСКУЮ ОБЛАСТЬ',
-    description: 'Инвестиционный портал СКО',
-    type: 'website',
-  },
-
-  appleWebApp: {
-    title: 'SKO Investing',
-  },
-
-  verification: {
-    google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
-    yandex: "5c4086505fb4b8db",
-  },
+    appleWebApp: {
+      title: 'СКО инвестиции',
+    },
+  }
 };
 
 export default async function RootLayout({

@@ -1,4 +1,39 @@
 {
+  "Metadata": {
+    "layout": {
+      "title": "Северо Казахстанская область - инвестиционный портал",
+      "description": "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости",
+      "openGraph": {
+        "title": "Северо Казахстанская область - инвестиционный портал | Инвестируйте в СКО",
+        "description": "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости"
+      },
+      "keywords": "СКО, Северо-Казахстанская область, инвестиции в СКО, Север Казахстана, инвестиционный портал Северо-Казахстанской области, льготы для инвесторов СКО, проекты в СКО, свободные экономические зоны СКО, поддержка бизнеса в СКО, новости инвестиций СКО, развитие экономики Северо-Казахстанской области"
+    }
+  },
+
+  "catalog": {
+    "opportunities": {
+      "tisers": [
+        {
+          "name": "Fertilizer and pesticide production",
+          "link": "FERTILIZER-AND-PESTICIDE"
+        },
+        {
+          "name": "Flax processing",
+          "link": "FLAX-PROCESSING"
+        },
+        {
+          "name": "Manufacturing of passenger and freight railcars",
+          "link": "PASSENGER-AND-FREIGHT"
+        },
+        {
+          "name": "Pasta production",
+          "link": "PASTA-PRODUCTION"
+        }
+      ]
+    }
+  },
+
   "header": {
     "seacrhPlaceholder": "Search",
     "headerMenu": {
@@ -10,7 +45,7 @@
     "goto": "Go to Home",
 
     "headerBottom": [
-      { 
+      {
         "label": "Investor Guide",
         "link": "/investor-guide",
         "list": [
@@ -111,9 +146,7 @@
       {
         "label": "Regulatory Legal Acts",
         "link": "/regulatory-acts",
-        "list": [
-          { "name": "Akim Resolutions", "link": "/eakimat-resolutions" }
-        ]
+        "list": [{ "name": "Akim Resolutions", "link": "/eakimat-resolutions" }]
       },
 
       {
@@ -206,7 +239,7 @@
     "title": "FAQ",
     "link": "/catalog/investor-guide/faq",
     "forInvestors": "Frequently Asked Questions",
-    
+
     "list": [
       {
         "question": "What is the basis for obtaining a petition to issue an investor visa?",
@@ -230,7 +263,77 @@
   "defense": {
     "title": "Investor Protection",
     "link": "/#defense",
-    "button": "All Legal Norms"
+    "button": "All Legal Norms",
+    "lawList": [
+      {
+        "title": "Investments",
+        "laws": [
+          {
+            "name": "On certain issues of state support for investments",
+            "src": "https://adilet.zan.kz/rus/docs/V1500012572"
+          },
+          {
+            "name": "On approval of the Rules for concluding, amending and terminating investment agreements",
+            "src": "https://adilet.zan.kz/rus/docs/V2300032095"
+          },
+          {
+            "name": "On approval of the Rules for determining a project as investment for the provision of land plots from state property",
+            "src": "https://adilet.zan.kz/rus/docs/V2100026282"
+          },
+          {
+            "name": "On approval of the Rules for receiving, registering and reviewing applications for investment preferences",
+            "src": "https://adilet.zan.kz/rus/docs/V1500012780"
+          }
+        ]
+      },
+      {
+        "title": "Business",
+        "laws": [
+          {
+            "name": "On certain measures of state support for private entrepreneurship",
+            "src": "https://adilet.zan.kz/rus/docs/P2400000754"
+          }
+        ]
+      },
+      {
+        "title": "Innovation",
+        "laws": [
+          {
+            "name": "On approval of the Rules for the creation and operation of small industrial zones",
+            "src": "https://adilet.zan.kz/rus/docs/V1900019355"
+          },
+          {
+            "name": "On approval of the Rules for including industrial and innovation projects in the unified industrialization map",
+            "src": "https://adilet.zan.kz/rus/docs/V2300033321"
+          },
+          {
+            "name": "On special economic and industrial zones",
+            "src": "https://adilet.zan.kz/rus/docs/Z1900000242"
+          }
+        ]
+      },
+      {
+        "title": "Tourism",
+        "laws": [
+          {
+            "name": "On approval of the Rules for reimbursement of part of the costs of purchasing motor vehicles with more than eight seats for entrepreneurs engaged in tourism activities",
+            "src": "https://adilet.zan.kz/rus/docs/V2100026380"
+          },
+          {
+            "name": "On approval of the Rules for reimbursement of part of the costs of entrepreneurs in the construction of roadside service facilities",
+            "src": "https://adilet.zan.kz/rus/docs/V2100026375"
+          },
+          {
+            "name": "On approval of the Rules for reimbursement of part of the costs of entrepreneurs in the construction and reconstruction of tourism facilities",
+            "src": "https://adilet.zan.kz/rus/docs/V2100026403"
+          },
+          {
+            "name": "On approval of the Rules for subsidizing part of the costs of entrepreneurs for the maintenance of sanitary and hygienic facilities",
+            "src": "https://adilet.zan.kz/rus/docs/V2100025801"
+          }
+        ]
+      }
+    ]
   },
 
   "footer": {

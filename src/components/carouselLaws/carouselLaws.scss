@@ -1,0 +1,69 @@
+.carouselLaws {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .embla__container {
+        display: flex;
+    }
+
+    .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+
+    .block_laws {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 5px;
+        gap: 15px;
+
+        .title_law {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .embla__buttons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 10px;
+
+        .embla__prev,
+        .embla__next {
+
+            top: 0;
+
+            .iconBtn {
+                color: var(--color-black);
+            }
+        }
+
+        button {
+            svg {
+                width: 32px;
+                height: 32px;
+                stroke-width: 1.5px;
+                transition: .3s;
+                stroke: var(--color-lightBlue);
+
+                fill: white;
+
+                &:hover {
+                    stroke: var(--color-darkBlue);
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                svg {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+}
