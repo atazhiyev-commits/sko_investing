@@ -1,6 +1,10 @@
 @import "@/styles/fonts";
 @import "./variable";
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;

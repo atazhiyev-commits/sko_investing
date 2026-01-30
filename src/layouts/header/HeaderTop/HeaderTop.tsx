@@ -26,7 +26,7 @@ const HeaderTop = () => {
   }
 
   return (
-    <div className="header__UP">
+    <div className="header__UP" id="header_top">
       <div className="header__search">
         <Form action={handleSearch()} className="form">
           <input

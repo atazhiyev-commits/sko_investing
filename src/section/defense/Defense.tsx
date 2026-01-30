@@ -21,7 +21,7 @@ const Defense: React.FC<DefenseProps> = ({ className }) => {
       <Container>
         <header className="defense__header">
           <h2 className="title-section">{t("title")}</h2>
-          <Link href={"/catalog/regulatory-acts"} className="btn-section">
+          <Link href={"/catalog/regulatory-acts#title_catalog"} className="btn-section">
             {t("button")}
           </Link>
         </header>

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import type { FAQlist } from "@/types/translateTypes";
 
@@ -19,7 +20,12 @@ const FAQ: React.FC<faqSectionProps> = ({ className }) => {
   return (
     <section className={clsx("faq", className)}>
       <Container>
-        <h2 className="title-section">{t("faq.title")}</h2>
+        <header className="faq__header">
+          <h2 className="title-section">{t("faq.title")}</h2>
+          <Link href={"/catalog/investor-guide/faq#title_catalog"} className="btn-section">
+            {t("faq.faqBtn")}
+          </Link>
+        </header>
         <div className="faq__content">
           {res.map(
             (item, index: number) =>

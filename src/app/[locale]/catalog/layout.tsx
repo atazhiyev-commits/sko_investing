@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import { Suspense } from "react";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +14,22 @@ import CatalogPage from "./Catalog";
 import LoadingCatalog from "../loadingCatalog";
 
 import "./catalogcss.scss";
+
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+
+    openGraph: {
+      title: t('openGraph.title'),
+      description: t('openGraph.description'),
+    },
+    keywords: t('keywords').split(', '),
+  }
+};
 
 const Catalog = ({ children }: { children: React.ReactNode }) => {
   const t = useTranslations("header");

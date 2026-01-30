@@ -1,15 +1,30 @@
-"use client";
 import { type FC } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import PDFViewer from "@/components/PDF/PDFViewer";
 
 import "./page.scss";
-
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   className?: string;
 }
+
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog' });
+
+  return {
+    title: "Business Registration | SKO Investing",
+    description: "Business Registration Guide | SKO Investing",
+
+    openGraph: {
+      title: t('openGraph.title'),
+      description: t('openGraph.description'),
+    },
+    keywords: t('keywords').split(', '),
+  }
+};
 
 const BusinessRegistration: FC<Props> = ({ className }) => {
   return (
