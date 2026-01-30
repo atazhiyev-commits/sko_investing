@@ -15,9 +15,6 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
-
   return {
     applicationName: 'SKO Investing',
     authors: [{ name: 'CSI' }, { name: 'CSI', url: 'https://csi.kz' }],
