@@ -1,14 +1,36 @@
 {
   "Metadata": {
     "layout": {
-      "title": "Северо Казахстанская область - инвестиционный портал",
-      "description": "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости",
+      "title": "North Kazakhstan region - investment portal",
+      "description": "Everything about the investment climate of North Kazakhstan region: benefits, projects, SEZ and business support, news",
       "openGraph": {
-        "title": "Северо Казахстанская область - инвестиционный портал | Инвестируйте в СКО",
-        "description": "Все об инвестиционном климате Северо-Казахстанской области: льготы, проекты, СЭЗ и поддержка бизнеса, новости"
+        "title": "North Kazakhstan region - investment portal | Invest in North Kazakhstan region",
+        "description": "Everything about the investment climate of North Kazakhstan region: benefits, projects, SEZ and business support, news"
       },
-      "keywords": "СКО, Северо-Казахстанская область, инвестиции в СКО, Север Казахстана, инвестиционный портал Северо-Казахстанской области, льготы для инвесторов СКО, проекты в СКО, свободные экономические зоны СКО, поддержка бизнеса в СКО, новости инвестиций СКО, развитие экономики Северо-Казахстанской области"
+      "keywords": "NKR, North Kazakhstan region, investments in NKR, North Kazakhstan, investment portal of North Kazakhstan region, benefits for investments in NKR, projects in NKR, SEZ in NKR, business support in NKR, news about investments in NKR, economic development of North Kazakhstan region"
+    },
+    "news": {
+      "title": "News of North Kazakhstan region | NKR",
+      "description": "News about NKR, investments, projects and business support in North Kazakhstan region",
+      "openGraph": {
+        "title": "News of North Kazakhstan region | NKR",
+        "description": "News about NKR, investments, projects and business support in North Kazakhstan region"
+      },
+      "keywords": "NKR, North Kazakhstan region, investments in NKR, North Kazakhstan, investment portal of North Kazakhstan region, benefits for investments in NKR, projects in NKR, SEZ in NKR, business support in NKR, news about investments in NKR, economic development of North Kazakhstan region"
+    },
+    "catalog": {
+      "title": "",
+      "description": "",
+      "openGraph": {
+        "title": "",
+        "description": ""
+      },
+      "keywords": ""
     }
+  },
+
+  "loading": {
+    "name": "loading..."
   },
 
   "catalog": {

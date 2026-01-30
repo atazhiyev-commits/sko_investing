@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
@@ -8,6 +9,7 @@ import type { LayoutType } from "@/types/translateTypes";
 
 import { MoveLeft } from "lucide-react";
 import CatalogPage from "./Catalog";
+import LoadingCatalog from "../loadingCatalog";
 
 import "./catalogcss.scss";
 
@@ -49,11 +51,15 @@ const Catalog = ({ children }: { children: React.ReactNode }) => {
             />
           </aside>
           <div className="catalog__content-info">
-            <div className="content">{children}</div>
+            <div className="content">
+              <Suspense fallback={<LoadingCatalog />}>
+                {children}
+              </Suspense>
+            </div>
           </div>
         </div>
       </Container>
-    </section>
+    </section >
   );
 };
 
