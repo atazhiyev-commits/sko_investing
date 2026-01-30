@@ -1,29 +1,34 @@
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import Form from 'next/form'
 
 import HeaderMenu from "./HeaderMenu";
 import SideMenu from "@/components/sideMenu";
-import { useTranslations } from "next-intl";
+import LocaleSwitcher from "@/shared/ui/LanguageSwitcher";
+import SocMedia from "@/section/socMedia";
 
 import { Eye, Menu } from "lucide-react";
 import logo from "@/assets/images/logo/logo.svg";
-import SocMedia from "@/section/socMedia";
 
 import Image from "next/image";
 
 import "./../header.scss";
-import LocaleSwitcher from "@/shared/ui/LanguageSwitcher";
 
 const HeaderTop = () => {
   const [toggled, setToggled] = useState(false);
   const t = useTranslations("header");
   const catalogPath = usePathname();
 
+  const handleSearch = () => {
+    return `/catalog/search${catalogPath ? `?from=${catalogPath}` : ""}`;
+  }
+
   return (
     <div className="header__UP">
       <div className="header__search">
-        <form action={`catalog/${catalogPath}/search`} className="form">
+        <Form action={handleSearch()} className="form">
           <input
             className="search__input"
             type="search"
@@ -31,7 +36,7 @@ const HeaderTop = () => {
             id="searchSKO"
             placeholder={t("seacrhPlaceholder")}
           />
-        </form>
+        </Form>
       </div>
       <HeaderMenu link={""} />
 
