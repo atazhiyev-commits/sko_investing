@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { getMessages } from "next-intl/server";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Header from "@/layouts/header";
 import Footer from "@/layouts/footer";
@@ -62,6 +63,7 @@ export default async function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <NextIntlClientProvider messages={messages}>
+            <SpeedInsights />
             <Header />
             {children}
             <Footer />
