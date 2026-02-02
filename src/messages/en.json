@@ -25,7 +25,133 @@
         "title": "",
         "description": ""
       },
-      "keywords": ""
+      "keywords": "",
+      "listCatalog": {
+        "investor-guide": {
+          "title": "Investor Guide",
+          "description": "Complete guide for investors in North Kazakhstan region"
+        },
+        "business-registration": {
+          "title": "Business Registration",
+          "description": "Business registration procedure in North Kazakhstan region"
+        },
+        "gov-support": {
+          "title": "Government Support",
+          "description": "Government support and benefits for investors"
+        },
+        "support-measures": {
+          "title": "State Support Measures",
+          "description": "Available support measures for investment projects"
+        },
+        "investment-contract": {
+          "title": "Investment Contract Conclusion",
+          "description": "Procedure for concluding an investment contract"
+        },
+        "industrialization-map": {
+          "title": "Unified Industrialization Map",
+          "description": "Including a project in the Unified Industrialization Map"
+        },
+        "land-without-auction": {
+          "title": "Land Plot Without Auction",
+          "description": "Procedure for obtaining a land plot without auction"
+        },
+        "land-auction": {
+          "title": "Land Plot at Auction",
+          "description": "Procedure for obtaining a land plot at auction"
+        },
+        "construction": {
+          "title": "Construction and Commissioning",
+          "description": "Process of construction and commissioning of facilities"
+        },
+        "construction-permit": {
+          "title": "Construction Permit",
+          "description": "How to obtain a construction permit"
+        },
+        "operation-permit": {
+          "title": "Commissioning Permit",
+          "description": "Procedure for obtaining a commissioning permit"
+        },
+        "technical-conditions": {
+          "title": "Technical Conditions and Connections",
+          "description": "Obtaining technical conditions and connections"
+        },
+        "get-technical-conditions": {
+          "title": "Get Technical Conditions",
+          "description": "Procedure for obtaining technical conditions"
+        },
+        "water-connection": {
+          "title": "Water Supply and Sewerage Connection",
+          "description": "Connection of facilities to water supply and sewerage systems"
+        },
+        "heat-connection": {
+          "title": "Heat Supply Connection",
+          "description": "Connection of facilities to heat supply system"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "description": "Answers to frequently asked questions from investors"
+        },
+        "investment-opportunities": {
+          "title": "Investment Opportunities in North Kazakhstan Region",
+          "description": "Investment potential of the region, completed projects, SEZ Qyzyljar and public-private partnership"
+        },
+        "investment-potential-region": {
+          "title": "Investment Potential of the Region | NKR",
+          "description": "Investment potential of North Kazakhstan region"
+        },
+        "completed-projects": {
+          "title": "Completed Investment Projects | NKR",
+          "description": "Information about completed investment projects in North Kazakhstan region"
+        },
+        "special-economic-zone-qyzyljar": {
+          "title": "Special Economic Zone «Qyzyljar» | NKR",
+          "description": "Information about special economic zone «Qyzyljar»"
+        },
+        "public-private-partnership": {
+          "title": "Public-Private Partnership | NKR",
+          "description": "Information about public-private partnership in North Kazakhstan region"
+        },
+        "regulatory-acts": {
+          "title": "Regulatory Legal Acts",
+          "description": "Resolutions and regulatory documents of Akim"
+        },
+        "eakimat-resolutions": {
+          "title": "Akim Resolutions",
+          "description": "Resolutions of Akim"
+        },
+        "about-region": {
+          "title": "About the Region",
+          "description": "Information about the region, economy and infrastructure"
+        },
+        "region-info": {
+          "title": "Region Information",
+          "description": "General information about North Kazakhstan region"
+        },
+        "economy": {
+          "title": "Economy",
+          "description": "Economic development of the region"
+        },
+        "infrastructure-and-tariffs": {
+          "title": "Infrastructure and Tariffs",
+          "description": "Information about infrastructure and tariffs in NKR"
+        },
+        "banks": {
+          "title": "Second Tier Banks",
+          "description": "List of second tier banks in the region"
+        },
+        "hotels": {
+          "title": "Hotels in North Kazakhstan",
+          "description": "Information about hotels in North Kazakhstan region"
+        },
+        "success-stories": {
+          "title": "Success Stories",
+          "description": "Stories of successful investment projects in NKR"
+        },
+        "search": {
+          "title": "Search",
+          "description": "Search for information about investment projects in North Kazakhstan region"
+        }
+      }
     }
   },
 
