@@ -25,6 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
     publisher: 'Smart Derek',
     icons: {
       icon: '/favicon_small.png',
+      shortcut: '/favicon_small.png',
+      apple: '/favicon_small.png',
     },
     verification: {
       google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
@@ -35,7 +37,14 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       title: 'СКО инвестиции',
       description: "Инвестиции в СКО, Северо-Казахстанская область",
-      images: '/favicon_small.png',
+      images: [
+        {
+          url: '/favicon_small.png',
+          width: 800,
+          height: 600,
+          alt: 'СКО инвестиции',
+        }
+      ],
     },
 
     appleWebApp: {
