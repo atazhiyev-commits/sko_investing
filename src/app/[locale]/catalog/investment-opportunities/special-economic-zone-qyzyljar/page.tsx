@@ -1,16 +1,23 @@
-import { type FC } from "react";
 import clsx from "clsx";
-
-import "./page.scss";
+import { getTranslations } from "next-intl/server";
 import PDFViewer from "@/components/PDF/PDFViewer";
 
-interface Props {
-  className?: string;
-}
+import "./page.scss";
 
-const InvestmentOpportunities: FC<Props> = ({ className }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.special-economic-zone-qyzyljar' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+};
+
+const InvestmentOpportunities = () => {
+
   return (
-    <div className={clsx("special-economic-zone-qyzyljar", className)}>
+    <div className={clsx("special-economic-zone-qyzyljar")}>
       <h2 className="title-section titleInvest">
         Специальная экономическая зона «Qyzyljar»
       </h2>

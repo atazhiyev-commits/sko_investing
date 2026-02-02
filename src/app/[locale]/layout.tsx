@@ -31,6 +31,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       siteName: 'SKO Investing',
       type: 'website',
+      title: 'СКО инвестиции',
+      description: "Инвестиции в СКО, Северо-Казахстанская область",
+      images: '/favicon_small.png',
     },
 
     appleWebApp: {

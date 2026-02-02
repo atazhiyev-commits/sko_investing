@@ -1,14 +1,20 @@
 import clsx from "clsx";
-import { type FC } from "react";
+import { getTranslations } from "next-intl/server";
 
-interface Props {
-  className?: string;
-}
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.gov-support' });
 
-const BusinessRegistration: FC<Props> = ({  className }) => {
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+};
+
+const BusinessRegistration = () => {
   return (
     <>
-      <h2 className={clsx("BusinessRegistration", className)}>
+      <h2 className={clsx("BusinessRegistration")}>
         Регистрация и бизнес
       </h2>
     </>

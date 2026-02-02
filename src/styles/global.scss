@@ -1,7 +1,7 @@
 @import "@/styles/fonts";
 @import "./variable";
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -65,4 +65,36 @@ body.a11y-mode button {
 
 body.a11y-mode img {
   opacity: 0.9;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+
+  .icon {
+    color: rgb(129, 129, 129);
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .desc {
+    font-size: 68px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .title {
+      font-size: 48px;
+    }
+
+    .desc {
+      font-size: 33px;
+    }
+  }
+
 }

@@ -12,6 +12,16 @@ interface Props {
   className?: string;
 }
 
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.regulatory-acts' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+};
+
 const InvestorGuide: FC<Props> = async ({ params, className }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'defense' });

@@ -1,22 +1,21 @@
+import { Metadata } from "next";
 import clsx from "clsx";
 import { type FC } from "react";
 
 import "./page.scss";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   className?: string;
 }
 
-export const metadata: Metadata = {
-  title: "Банки второго уровня в Петропавловске и СКО | Список и контакты",
-  description: "Актуальный справочник банков второго уровня (БВУ) в Северо-Казахстанской области. Адреса, прямые контакты и финансовые услуги для инвесторов и бизнеса.",
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.banks' });
 
-  verification: {
-    google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
-  },
-  alternates: {
-    canonical: 'https://invest-sko.kz/banks',
+  return {
+    title: t('title'),
+    description: t('description'),
   }
 };
 

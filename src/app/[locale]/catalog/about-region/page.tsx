@@ -1,24 +1,21 @@
-import { type FC } from "react";
 import clsx from "clsx";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-interface Props {
-  className?: string;
-}
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> })=> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.about-region' });
 
-export const metadata: Metadata = {
-  title: "О регионе",
-  description: "О регионе - Северо Казахстанская область - инвестиционный портал",
+  return {
+    title: t('title'),
+    description: t('description'),
 
-  verification: {
-    google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
-  },
+  }
 };
 
 
-const AboutTheRegion: FC<Props> = ({ className }) => {
+const AboutTheRegion = () => {
   return (
-    <div className={clsx("AboutTheRegion", className)}>
+    <div className={clsx("AboutTheRegion")}>
       <h2 className="title-section">AboutTheRegion</h2>
     </div>
   );

@@ -1,13 +1,19 @@
-import { type FC } from "react";
 import clsx from "clsx";
+import { getTranslations } from "next-intl/server";
 
-interface Props {
-  className?: string;
-}
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.get-technical-conditions' });
 
-const InvestorGuide: FC<Props> = async ({ className }) => {
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+};
+
+const InvestorGuide = async () => {
   return (
-    <div className={clsx("InvestorGuide", className)}>
+    <div className={clsx("InvestorGuide")}>
       <h2 className="title-section">Получение технических условий</h2>
     </div>
   );

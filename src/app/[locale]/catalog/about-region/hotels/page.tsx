@@ -1,8 +1,20 @@
 import clsx from "clsx";
-import { hotels } from "./hotels";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { hotels } from "./hotels";
 
 import "./page.scss";
+
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> })=> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.economy' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+
+  }
+};
 
 const Hotels = () => {
   return (

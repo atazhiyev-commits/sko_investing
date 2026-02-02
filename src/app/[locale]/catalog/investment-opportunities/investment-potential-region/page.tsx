@@ -1,25 +1,26 @@
-"use client";
-import { type FC } from "react";
 import clsx from "clsx";
+import { getTranslations } from "next-intl/server";
+import { TisersPDF } from "./tisersPDF";
 import { BtnLink } from "@/components/btnLink/BtnLink";
-import PDFViewer from "@/components/PDF/PDFViewer";
-import { useSearchParams } from "next/navigation";
-import { useTranslations } from "next-intl";
 
 import "./page.scss";
 
-interface Props {
-  className?: string;
-}
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.investment-potential-region' });
 
-const InvestmentOpportunities: FC<Props> = ({ className }) => {
-  const searchParams = useSearchParams();
-  const searchQuery = (searchParams && searchParams.get("tisers")) || "";
-  const t = useTranslations("catalog.opportunities");
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+};
+
+const InvestmentOpportunities = async () => {
+  const t = await getTranslations({ locale: "ru", namespace: "catalog.opportunities" });
   const tisers = t.raw("tisers");
 
   return (
-    <div className={clsx("InvestmentOpportunities", className)}>
+    <div className={clsx("InvestmentOpportunities")}>
       <h2 className="title-section titleInvest">
         Инвестиционный потенциал региона
       </h2>
@@ -29,7 +30,7 @@ const InvestmentOpportunities: FC<Props> = ({ className }) => {
         ))}
       </div>
       <h3 className="titleLaw">Слайд</h3>
-      <PDFViewer src={"/pdf/tisers/" + searchQuery + ".pdf"} />
+      <TisersPDF />
     </div>
   );
 };
