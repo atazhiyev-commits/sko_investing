@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -13,16 +13,14 @@ import { Eye, Menu } from "lucide-react";
 import logo from "@/assets/images/logo/logo.svg";
 
 import Image from "next/image";
+import { useA11yStore } from "@/shared/store/a11y";
 
 import "./../header.scss";
 
 const HeaderTop = () => {
   const [toggled, setToggled] = useState(false);
-  const [eyeActive, setEyeActive] = useState(false);
+  const { toggleA11yMode } = useA11yStore() as any;
 
-  useEffect(() => {
-    document.body.className = eyeActive ? "a11y" : "";
-  }, [eyeActive])
   const t = useTranslations("header");
   const catalogPath = usePathname();
 
@@ -57,8 +55,7 @@ const HeaderTop = () => {
         <ul className="header__nav-global_setting">
           <button
             className="eyes"
-            data-acitve-eye={eyeActive}
-            onClick={() => setEyeActive(!eyeActive)}>
+            onClick={() => toggleA11yMode()}>
             <Eye size={24} />
           </button>
           <LocaleSwitcher />

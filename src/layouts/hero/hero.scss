@@ -6,6 +6,24 @@
   line-clamp: $line;
 }
 
+
+body.a11y {
+  .hero {
+    &__bg {
+      background-color: var(--color-dark-gray);
+    }
+
+    &__content-nav {
+      // background-color: var(--color-black);
+      padding: 15px 15px 15px 0;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -142,19 +160,6 @@
           }
         }
       }
-    }
-  }
-}
-
-body.a11y {
-  .hero {
-    .hero__bg {
-      background-color: var(--color-gray);
-    }
-
-    .hero__content-nav {
-      background-color: var(--color-black);
-      padding: 15px 15px 15px 0;
     }
   }
 }

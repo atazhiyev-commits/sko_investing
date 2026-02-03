@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
@@ -11,7 +12,7 @@ import { Dot } from "lucide-react";
 import { images } from "./backgroundImages";
 
 import "./hero.scss";
-import { useEffect, useState } from "react";
+import { useA11yStore } from "@/shared/store/a11y";
 
 interface HeroProps {
   className?: string;
@@ -20,21 +21,12 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ className }) => {
   const t = useTranslations("hero");
   const listHero = t.raw("list") as BottomItem[];
-  const [isA11y, setIsA11y] = useState(false);
-
-  useEffect(() => {
-    const update = () => setIsA11y(document.body.classList.contains("a11y"));
-    update();
-    const obs = new MutationObserver(update);
-    obs.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
-  }, []);
-
+  const { a11yMode } = useA11yStore() as { a11yMode: boolean };
 
   return (
     <section className={clsx("hero", className)}>
       <div className="hero__bg">
-        {!isA11y && <CarouselHero
+        {!a11yMode && <CarouselHero
           imageList={images}
           countNews={1}
           className="hero__bg"

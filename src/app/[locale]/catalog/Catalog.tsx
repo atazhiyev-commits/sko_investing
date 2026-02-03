@@ -11,7 +11,6 @@ export default function CatalogPage() {
     .filter((segment) => segment.length > 0)
     .pop();
 
-  console.log(lastPart)
   const t = useTranslations(`Metadata.catalog.listCatalog.${lastPart}`);
 
   return (

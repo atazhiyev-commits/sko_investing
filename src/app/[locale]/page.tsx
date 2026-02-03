@@ -23,7 +23,6 @@ export const generateMetadata = async ({ params }: { params: Promise<{ locale: s
 };
 
 export default async function Home() {
-
   return (
     <div className={`app`}>
       <Hero />

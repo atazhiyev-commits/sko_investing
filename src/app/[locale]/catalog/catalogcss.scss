@@ -6,8 +6,17 @@
   line-clamp: $line;
 }
 
-.catalog__head-title{
+.catalog__head-title {
   @include clamp(2);
+}
+
+body.a11y {
+  .catalog {
+    &__head {
+      background-image: none;
+      background-color: #2d3748;
+    }
+  }
 }
 
 .catalog {
@@ -92,6 +101,7 @@
 
   @media screen and (max-width: 992px) {
     margin-top: 60px;
+
     .catalog__head-title {
       font-size: 32px;
     }
