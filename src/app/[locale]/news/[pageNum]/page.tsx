@@ -9,7 +9,6 @@ import type { storeType } from "@/types/api_news_types";
 import Container from "@/components/container/Container";
 import PageNewsCard from "@/components/newsCard/PageNewsCard";
 import Pagination from "@mui/material/Pagination";
-import ErrorPage from "@/layouts/error/ErrorPage";
 import NewsSkeleton from "@/components/Skeleton/newsSkeleton";
 import { useRouter } from "@/i18n/navigation";
 
