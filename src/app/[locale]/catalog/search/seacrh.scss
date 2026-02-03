@@ -1,3 +1,14 @@
+body.a11y{
+  .searchCatalog{
+    .blockresult{
+      .resultText{
+        color: var(--color-black);
+        border-color: var(--color-black);
+      }
+    }
+  }
+}
+
 .searchCatalog {
   &__title {
     margin-bottom: 20px;

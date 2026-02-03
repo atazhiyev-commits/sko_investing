@@ -1,16 +1,12 @@
 import { type FC, useCallback } from "react";
-import { Link } from "@/i18n/navigation";
 import useEmblaCarousel from "embla-carousel-react";
 import clsx from "clsx";
-import type { NewsItem } from "@/types/api_news_types";
-
-import BigImg from "@/components/newsCard/big/BigImg";
-
-import { ChevronLeft, ChevronRight, CircleChevronLeft, CircleChevronRight } from "lucide-react";
-
-import "./carouselLaws.scss";
 import { BtnLink } from "../btnLink/BtnLink";
 import { LawType } from "@/types/translateTypes";
+
+import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
+
+import "./carouselLaws.scss";
 
 interface Props {
     lawsList: any;

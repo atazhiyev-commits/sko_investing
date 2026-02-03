@@ -23,3 +23,21 @@
     font-weight: 500;
   }
 }
+
+body.a11y {
+  .btnLink {
+    background-color: var(--color-darkBlue);
+
+    .btnLink__text {
+      color: var(--color-white);
+    }
+
+    &:hover {
+      background-color: var(--color-lightBlue);
+
+      .btnLink__text {
+        color: var(--color-black);
+      }
+    }
+  }
+}

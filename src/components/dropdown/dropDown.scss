@@ -29,3 +29,16 @@
     }
   }
 }
+
+body.a11y {
+  .dropDown {
+    .dropDown__content-name {
+      color: var(--color-black);
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-black);
+      }
+    }
+  }
+}

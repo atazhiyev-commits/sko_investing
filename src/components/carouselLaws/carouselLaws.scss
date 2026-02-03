@@ -67,3 +67,16 @@
         }
     }
 }
+
+body.a11y {
+    .embla__buttons {
+        svg {
+            stroke: var(--color-darkBlue);
+
+            &:hover {
+                stroke: var(--color-white);
+                fill: var(--color-black);
+            }
+        }
+    }
+}

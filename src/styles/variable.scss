@@ -12,6 +12,28 @@
   --media-tablet: 992px;
 }
 
+body.a11y {
+  --color-darkBlue: #000000;
+  --color-lightBlue: #ffffff;
+
+  .btn-section {
+    display: inline-block;
+    background-color: var(--color-darkBlue);
+    padding: 9px;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 13px;
+
+    transition: 0.4s;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: var(--color-gray);
+      color: var(--color-black);
+    }
+  }
+}
+
 .title-section {
   font-size: var(--title-size);
   font-weight: var(--title-weight);

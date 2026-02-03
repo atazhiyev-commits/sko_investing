@@ -54,6 +54,7 @@
 
     &-nav {
       margin-top: 110px;
+      display: inline-block;
 
       .title-section {
         color: var(--color-white);
@@ -141,6 +142,19 @@
           }
         }
       }
+    }
+  }
+}
+
+body.a11y {
+  .hero {
+    .hero__bg {
+      background-color: var(--color-gray);
+    }
+
+    .hero__content-nav {
+      background-color: var(--color-black);
+      padding: 15px 15px 15px 0;
     }
   }
 }

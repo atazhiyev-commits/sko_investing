@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -18,6 +18,11 @@ import "./../header.scss";
 
 const HeaderTop = () => {
   const [toggled, setToggled] = useState(false);
+  const [eyeActive, setEyeActive] = useState(false);
+
+  useEffect(() => {
+    document.body.className = eyeActive ? "a11y" : "";
+  }, [eyeActive])
   const t = useTranslations("header");
   const catalogPath = usePathname();
 
@@ -50,7 +55,10 @@ const HeaderTop = () => {
         <SocMedia className="header__nav-socMedia" />
 
         <ul className="header__nav-global_setting">
-          <button className="eyes" onClick={() => {}}>
+          <button
+            className="eyes"
+            data-acitve-eye={eyeActive}
+            onClick={() => setEyeActive(!eyeActive)}>
             <Eye size={24} />
           </button>
           <LocaleSwitcher />
