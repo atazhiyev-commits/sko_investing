@@ -55,7 +55,8 @@
       .menu-item {
         color: var(--color-white);
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
+        letter-spacing: 0.7;
       }
     }
   }
@@ -68,7 +69,8 @@
 
       .item-list {
         color: var(--color-white);
-        font-weight: 400;
+        font-weight: 500;
+        letter-spacing: 0.5;
       }
     }
   }
@@ -80,28 +82,23 @@
       gap: 15px;
 
       color: var(--color-white);
+
       .phone {
         &-title {
-          font-weight: 500;
-          letter-spacing: 0.7px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
         }
 
         .number {
           margin-top: 5px;
-          font-weight: 300;
-          letter-spacing: 0.7px;
+          font-weight: 500;
+          letter-spacing: 0.8px;
         }
       }
     }
   }
 
   @media screen and (max-width: 992px) {
-    &__menu {
-      .menu-item {
-        font-weight: 300;
-      }
-    }
-
     &__icons {
       display: none;
     }
@@ -115,6 +112,7 @@
     &__contact {
       display: none;
     }
+
     &__menu {
       width: 100%;
       display: flex;
@@ -157,6 +155,7 @@
 
   @media screen and (max-width: 800px) {
     padding-block: 25px;
+
     &__content {
       flex-direction: column;
       gap: 20px;

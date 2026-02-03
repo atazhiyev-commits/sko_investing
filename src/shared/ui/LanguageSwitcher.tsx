@@ -25,11 +25,12 @@ export default function LocaleSwitcher() {
         className={"language"}
         value={locale}
         disabled={isPending}
+        id='language_state'
         onChange={e => switchLocale(e.target.value)}
         style={{ opacity: isPending ? 0.5 : 1 }}
       >
-        <option value="en">EN</option>
-        <option value="ru">RU</option>
+        <option id='lang' value="en">EN</option>
+        <option id='lang' value="ru">RU</option>
         {/* 
         <option value="kz">KZ</option>
         <option value="chi">CHI</option> */}
