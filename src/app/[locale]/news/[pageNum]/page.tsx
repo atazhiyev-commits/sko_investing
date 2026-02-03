@@ -47,7 +47,7 @@ const News = () => {
           <NewsSkeleton />
         ) : (
           <>
-            {news?.data && news.data.length > 0 ? (
+            {news?.data && news.data.length > 0 &&
               <div className="page-news__content">
                 <h2 className="title-section">{t("PageNews.title")}</h2>
                 <div className="page-news__wrapper">
@@ -71,11 +71,7 @@ const News = () => {
                   />
                 </div>
               </div>
-            ) : (
-              <div className="not-found-state">
-                <ErrorPage />
-              </div>
-            )}
+            }
           </>
         )}
       </Container>
