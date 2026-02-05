@@ -16,6 +16,12 @@ body.a11y {
       background-image: none;
       background-color: #2d3748;
     }
+
+    .breadcrumb{
+      .linkBack{
+        color: var(--color-darkBlue);
+      }
+    }
   }
 }
 

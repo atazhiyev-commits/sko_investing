@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
+import { useA11yStore } from "@/shared/store/a11y";
 
 import Container from "@/components/container/Container";
 import CarouselHero from "@/components/Carousel/CarouselHero";
@@ -12,7 +12,6 @@ import { Dot } from "lucide-react";
 import { images } from "./backgroundImages";
 
 import "./hero.scss";
-import { useA11yStore } from "@/shared/store/a11y";
 
 interface HeroProps {
   className?: string;
@@ -33,8 +32,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           classNameImg="imageBack"
         />}
       </div>
-
-
       <Container>
         <div className="hero__content">
           <h1 className="hero__title">{t("title")}</h1>

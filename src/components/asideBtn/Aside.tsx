@@ -14,7 +14,7 @@ interface Props {
   activeLink: string;
   list?: ArrList[];
   className?: string;
-}
+} 
 
 const Aside: FC<Props> = ({ name, list, activeLink, className }) => {
   const [active, setActive] = useState(false);

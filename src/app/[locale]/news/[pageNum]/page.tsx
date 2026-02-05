@@ -41,7 +41,7 @@ const News = () => {
   }, [fetchNews, activePage, locale]);
 
   return (
-    <section className={clsx("page-news")}>
+    <div className={clsx("page-news")}>
       <Container>
         {isLoading ? (
           <NewsSkeleton />
@@ -75,7 +75,7 @@ const News = () => {
           </>
         )}
       </Container>
-    </section>
+    </div>
   );
 };
 
