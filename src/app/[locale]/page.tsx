@@ -27,7 +27,7 @@ export default async function Home() {
     <div className={`app`}>
       <main className="main">
         <Hero />
-        {/* <NewsSection /> */}
+        <NewsSection />
         <Helper />
         <FAQ />
         <Defense />
