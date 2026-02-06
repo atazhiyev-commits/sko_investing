@@ -46,7 +46,7 @@ const Catalog = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       <Container>
-        <Link hrefLang={"/"} className="breadcrumb">
+        <Link href={"/"} className="breadcrumb">
           <span className="linkBack">
             <MoveLeft className="move-left" /> {t("goto")}
           </span>

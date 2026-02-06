@@ -27,6 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: '/favicon_small.png',
       shortcut: '/favicon_small.png',
       apple: '/favicon_small.png',
+      other: {
+        rel: '/favicon_small.png',
+        url: '/favicon_small.png',
+      }
     },
     verification: {
       google: "1MwFBGJzBOEzqk6-jXSDjtBRvcYRfOEkhyvip1wG-cg",
@@ -49,6 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
     appleWebApp: {
       title: 'СКО инвестиции',
+      startupImage: '/favicon_small.png',
     },
   }
 };
