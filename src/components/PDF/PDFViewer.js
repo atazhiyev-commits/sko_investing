@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 
-// Dynamically import the PDF viewer client component.
 const PDFViewerClient = dynamic(() => import("./PDFViewerClient"), {
   ssr: false,
   loading: () => (
@@ -18,7 +17,7 @@ const PDFViewerClient = dynamic(() => import("./PDFViewerClient"), {
   ),
 });
 
-const PDFViewer = ({ src }) => {
-  return <PDFViewerClient src={src} />;
+const PDFViewer = ({ src, width }) => {
+  return <PDFViewerClient src={src} width={width > 1000 ? 850 : width} />;
 };
 export default PDFViewer;

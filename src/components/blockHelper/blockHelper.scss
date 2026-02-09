@@ -1,5 +1,22 @@
 body.a11y {
   .blockHelper {
+    .blockHelper__item {
+
+      &:hover {
+        background-color: var(--color-black);
+
+        .blockText {
+          color: var(--color-white);
+        }
+
+        .blockIcon {
+          svg {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+
     .blockIcon {
       svg {
         color: #000000;
@@ -11,6 +28,13 @@ body.a11y {
 .blockHelper {
   max-width: max-content;
 
+
+  &:hover {
+    .blockText {
+      color: var(--color-lightBlue);
+    }
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -19,9 +43,11 @@ body.a11y {
     height: 55px;
     padding: 16px 22px;
     background-color: var(--color-white);
+    transition: .3s;
 
     .blockIcon {
       svg {
+        transition: .3s;
         color: #00c0e8;
       }
     }
@@ -37,6 +63,7 @@ body.a11y {
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      transition: .2s;
     }
   }
 

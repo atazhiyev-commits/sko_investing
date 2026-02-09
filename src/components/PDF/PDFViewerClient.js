@@ -3,12 +3,13 @@ import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
+import "./pdf.scss"
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString();
-const PDFViewerClient = ({ src }) => {
+const PDFViewerClient = ({ src, width }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -23,7 +24,7 @@ const PDFViewerClient = ({ src }) => {
     setPageNumber(pageNumber + 1 >= numPages ? numPages : pageNumber + 1);
 
   return (
-    <div style={{marginTop: "30px"}}>
+    <div style={{ marginTop: "30px" }}>
       <nav
         style={{
           marginBottom: "1rem",
@@ -99,7 +100,7 @@ const PDFViewerClient = ({ src }) => {
             pageNumber={pageNumber}
             renderTextLayer={true}
             renderAnnotationLayer={true}
-            width={765}
+            width={width}
           />
         </Document>
       </div>

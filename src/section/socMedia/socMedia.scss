@@ -4,3 +4,14 @@
   margin-inline: 5px;
   gap: 6px;
 }
+
+body.a11y{
+  .soc_link{
+    svg{
+      &:hover{
+        color: var(--color-black);
+        background-color: var(--color-white);
+      }
+    }
+  }
+}

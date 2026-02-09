@@ -33,6 +33,7 @@ export type ArrList = {
 export type List = {
   name: string;
   link: string;
+  list: Array<List>
 };
 
 export type FAQlist = {

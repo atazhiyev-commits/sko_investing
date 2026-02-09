@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
-import PDFViewer from "@/components/PDF/PDFViewer";
+import PDFCatalog from "@/components/pdfCatalog/PDFCatalog";
 
 import "./page.scss";
 
@@ -21,7 +21,7 @@ const InvestmentOpportunities = () => {
       <h2 className="title-section titleInvest">
         Специальная экономическая зона «Qyzyljar»
       </h2>
-      <PDFViewer src={"/pdf/special-economic-zone-qyzyljar.pdf"} />
+      <PDFCatalog src={"/pdf/special-economic-zone-qyzyljar.pdf"} widthProps={70} />
     </div>
   );
 };

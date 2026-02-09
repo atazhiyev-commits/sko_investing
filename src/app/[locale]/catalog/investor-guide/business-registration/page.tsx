@@ -1,17 +1,19 @@
 import Link from "next/link";
-import clsx from "clsx";
-import PDFViewer from "@/components/PDF/PDFViewer";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import clsx from "clsx";
+import PDFCatalog from "@/components/pdfCatalog/PDFCatalog";
 
 import "./page.scss";
 
-export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> => {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata.catalog.listCatalog.business-registration' });
 
   return {
     title: t('title'),
     description: t('description'),
+    viewport: 'width=device-width, initial-scale=1.0',
   }
 };
 
@@ -21,7 +23,7 @@ const BusinessRegistration = () => {
       <h2 className={clsx("businessRegistration")}>
         Регистрация бизнеса
       </h2>
-      <PDFViewer src={"/pdf/business-registration.pdf"} />
+      {<PDFCatalog src={"/pdf/business-registration.pdf"} widthProps={40} />}
       <Link href="https://egov.kz/cms/ru/articles/Kak-otkryt-IP">
         Как открыть ИП
       </Link>

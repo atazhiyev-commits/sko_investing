@@ -1,3 +1,16 @@
+body.a11y {
+  .footer {
+
+    .menu-item,
+    .item_link {
+      &:hover {
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
+    }
+  }
+}
+
 .footer {
   background-color: var(--color-darkBlue);
 
