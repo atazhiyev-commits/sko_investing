@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://skoinvesting.vercel.app/catalog";
   const RU_baseUrl = "https://skoinvesting.vercel.app/ru/catalog";
 
-  const currentDate = new Date();
+  const currentDate = "2026-02-12T18:20:51.266Z";
 
   const t = await getTranslations("header");
   const links = (await t.raw("headerBottom")) as Array<ArrList>;
