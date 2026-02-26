@@ -1,10 +1,15 @@
 import axios from "axios";
 
+const authToken =
+  process.env.NEWS_API_TOKEN || process.env.NEXT_PUBLIC_VITE_SOME_KEY || "";
+
 const api = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_NEWS_API_URL}/api`,
-  headers: {
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_VITE_SOME_KEY}`,
-  },
+  headers: authToken
+    ? {
+        Authorization: `Bearer ${authToken}`,
+      }
+    : undefined,
 });
 
 export const getNews = async (locale: string, totalPage: number) => {

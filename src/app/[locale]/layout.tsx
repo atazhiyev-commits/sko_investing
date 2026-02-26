@@ -16,8 +16,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://skoinvesting.vercel.app";
+
   return {
-    metadataBase: new URL('https://skoinvesting.vercel.app/'),
+    metadataBase: new URL(siteUrl),
     applicationName: 'SKO Investing',
     authors: [{ name: 'CSI' }, { name: 'CSI', url: 'https://csi.kz' }],
     creator: 'Smart Derek',

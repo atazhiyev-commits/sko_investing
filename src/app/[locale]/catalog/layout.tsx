@@ -22,6 +22,9 @@ export const generateMetadata = async ({ params }: { params: Promise<{ locale: s
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: "./",
+    },
 
     openGraph: {
       title: t('openGraph.title'),

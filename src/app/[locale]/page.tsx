@@ -19,10 +19,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ locale: s
       description: t('openGraph.description'),
     },
     alternates: {
-      canonical: `https://skoinvesting.vercel.app/ru`,
-      languages: {
-        en: "https://skoinvesting.vercel.app/",
-      }
+      canonical: `./`,
     },
     keywords: t('keywords').split(', '),
   }
