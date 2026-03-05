@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const authToken =
-  process.env.NEWS_API_TOKEN || process.env.NEXT_PUBLIC_VITE_SOME_KEY || "";
+const authToken = process.env.NEXT_PUBLIC_VITE_SOME_KEY || "";
+
+console.log(authToken);
+
+if (!authToken) {
+  throw new Error("Missing API token");
+}
 
 const api = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_NEWS_API_URL}/api`,
