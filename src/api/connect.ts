@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const authToken = process.env.NEXT_PUBLIC_VITE_SOME_KEY || "";
-
-console.log(authToken);
+const authToken = process.env.STRAPI_API_TOKEN || "";
 
 if (!authToken) {
   throw new Error("Missing API token");

@@ -8,6 +8,21 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'skoinvesting.vercel.app',
+          },
+        ],
+        destination: 'https://sko-invest.kz/:path*', 
+        permanent: true,
+      },
+    ];
+  },
 };
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
